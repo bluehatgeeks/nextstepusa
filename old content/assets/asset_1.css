@@ -1,0 +1,32 @@
+@font-face {
+  font-family: 'Inter';
+  src: url(https://user.lpcontent.net/fonts/9NnXuxthGCqvt67qHe2ZbV/Mxo7FHokCB2yC7kRgMtruY/dLdgvjCP69YPc24XWK6huj.woff2?time=1691657647) format('woff2'),
+       url(https://user.lpcontent.net/fonts/9NnXuxthGCqvt67qHe2ZbV/Mxo7FHokCB2yC7kRgMtruY/dLdgvjCP69YPc24XWK6huj.woff?time=1691657647) format('woff');
+  font-weight: 400;
+  font-style: regular;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url(https://user.lpcontent.net/fonts/9NnXuxthGCqvt67qHe2ZbV/Mxo7FHokCB2yC7kRgMtruY/avpc2kbyToeNkMyHPE3EbN.woff2?time=1691657647) format('woff2'),
+       url(https://user.lpcontent.net/fonts/9NnXuxthGCqvt67qHe2ZbV/Mxo7FHokCB2yC7kRgMtruY/avpc2kbyToeNkMyHPE3EbN.woff?time=1691657647) format('woff');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url(https://user.lpcontent.net/fonts/9NnXuxthGCqvt67qHe2ZbV/Mxo7FHokCB2yC7kRgMtruY/SY6Zg2EsYcntEjE3CXTicS.woff2?time=1691657647) format('woff2'),
+       url(https://user.lpcontent.net/fonts/9NnXuxthGCqvt67qHe2ZbV/Mxo7FHokCB2yC7kRgMtruY/SY6Zg2EsYcntEjE3CXTicS.woff?time=1691657647) format('woff');
+  font-weight: 700;
+  font-style: regular;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url(https://user.lpcontent.net/fonts/9NnXuxthGCqvt67qHe2ZbV/Mxo7FHokCB2yC7kRgMtruY/q5MVYCRocxhuCSM53sYqMA.woff2?time=1691657647) format('woff2'),
+       url(https://user.lpcontent.net/fonts/9NnXuxthGCqvt67qHe2ZbV/Mxo7FHokCB2yC7kRgMtruY/q5MVYCRocxhuCSM53sYqMA.woff?time=1691657647) format('woff');
+  font-weight: 700;
+  font-style: italic;
+}
+

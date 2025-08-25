@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .test-section { margin: 20px 0; padding: 15px; border: 1px solid #ddd; border-radius: 5px; }
+        .content-display { background: #f8f9fa; padding: 10px; border-radius: 3px; margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <h1>Content Test - Real Content Verification</h1>
+    
+    <div class="test-section">
+        <h2>Loading Status</h2>
+        <div id="loadingStatus">Loading...</div>
+    </div>
+    
+    <div class="test-section">
+        <h2>Hero Section</h2>
+        <div id="heroContent" class="content-display">Loading...</div>
+    </div>
+    
+    <div class="test-section">
+        <h2>Testimonials</h2>
+        <div id="testimonialsContent" class="content-display">Loading...</div>
+    </div>
+    
+    <div class="test-section">
+        <h2>Raw JSON</h2>
+        <pre id="rawJson" style="background: #f8f9fa; padding: 10px; border-radius: 3px; overflow-x: auto;"></pre>
+    </div>
+
+    <script>
+        async function loadAndDisplayContent() {
+            try {
+                // Force no cache
+                const response = await fetch('real_content.json?v=' + Date.now());
+                const content = await response.json();
+                
+                document.getElementById('loadingStatus').innerHTML = '✅ Content loaded successfully!';
+                document.getElementById('rawJson').textContent = JSON.stringify(content, null, 2);
+                
+                // Display hero content
+                const heroContent = `
+                    <strong>Title:</strong> ${content.hero.title}<br>
+                    <strong>Subtitle:</strong> ${content.hero.subtitle}<br>
+                    <strong>CTA:</strong> ${content.hero.ctaText}
+                `;
+                document.getElementById('heroContent').innerHTML = heroContent;
+                
+                // Display testimonials
+                const testimonialsHtml = content.testimonials.items.map(item => 
+                    `<div style="margin: 10px 0; padding: 10px; border-left: 3px solid #007bff;">
+                        <strong>${item.author}</strong><br>
+                        "${item.quote}"
+                    </div>`
+                ).join('');
+                document.getElementById('testimonialsContent').innerHTML = testimonialsHtml;
+                
+            } catch (error) {
+                document.getElementById('loadingStatus').innerHTML = '❌ Error loading content: ' + error.message;
+                console.error('Error:', error);
+            }
+        }
+        
+        // Load content when page loads
+        window.onload = loadAndDisplayContent;
+    </script>
+</body>
+</html>
