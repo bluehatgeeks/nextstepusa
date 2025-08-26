@@ -3197,5 +3197,45 @@
       var tries = 0, t = setInterval(function(){ postHeight(); if (++tries > 3) clearInterval(t); }, 1000);
     })();
   </script>
+  <script>
+    (function () {
+      var IFRAME_ID = 'fb-embed-1';
+      function postHeightSoon() {
+        setTimeout(function () {
+          try {
+            var h = Math.max(document.documentElement.scrollHeight, document.body ? document.body.scrollHeight : 0);
+            window.parent.postMessage({ type: 'fb-iframe-height', id: IFRAME_ID, height: h }, '*');
+          } catch (e) {}
+        }, 30);
+      }
+      function setLang(lang) {
+        var showEN = (lang === 'en');
+        document.querySelectorAll('.content-en').forEach(function (el) {
+          el.style.display = showEN ? 'block' : 'none';
+          el.classList.toggle('active', showEN);
+        });
+        document.querySelectorAll('.content-es').forEach(function (el) {
+          el.style.display = showEN ? 'none' : 'block';
+          el.classList.toggle('active', !showEN);
+        });
+        document.querySelectorAll('.language-toggle button').forEach(function (btn) {
+          var val = (btn.dataset.lang || btn.textContent || '').trim().toLowerCase();
+          btn.classList.toggle('active', val === lang);
+        });
+        try { localStorage.setItem('lang', lang); } catch (e) {}
+        postHeightSoon();
+      }
+      // expose global for onclick="toggleLanguage('en')"
+      window.toggleLanguage = function (lang) {
+        lang = (lang || '').toLowerCase() === 'es' ? 'es' : 'en';
+        setLang(lang);
+      };
+      // initial state
+      var initial = 'en';
+      try { initial = localStorage.getItem('lang') || initial; } catch (e) {}
+      setLang(initial);
+    })();
+    </script>
+    
 </body>
 </html>
