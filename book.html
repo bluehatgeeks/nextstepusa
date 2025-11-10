@@ -8,7 +8,11 @@
     
     <style>
         /* Keep the iframe content self-contained */
-    html, body { margin: 0; padding: 0; }
+    html, body { 
+        margin: 0; 
+        padding: 0; 
+        background-color: white !important;
+    }
     img, video, iframe { max-width: 100%; height: auto; display: block; }
     
         /* Essential CSS for the logo section */
@@ -21,6 +25,7 @@
             padding-right: 0cqw;
             padding-bottom: 0cqw;
             padding-left: 0cqw;
+            background-color: white !important;
         }
         
         @media(min-width:71.25em) {
@@ -39,7 +44,7 @@
         }
         
         .css-eeduzr {
-            background-color: rgba(0,0,0,0);
+            background-color: white !important;
             border-color: rgba(0,0,0,0);
             border-radius: 0px;
             background-size: cover;
@@ -53,6 +58,21 @@
             padding-right: 1cqw;
             padding-bottom: 1cqw;
             padding-left: 1cqw;
+        }
+        
+        /* Ensure header section and all child elements have white background */
+        #header,
+        #header .container,
+        #header .layout,
+        #header .column,
+        #header .inner-column,
+        #header .row,
+        #header .composite,
+        #header .inner-composite,
+        #header .widget-column,
+        #header .widget-row,
+        #header .widget {
+            background-color: white !important;
         }
         
         .bar .css-eeduzr {
@@ -899,6 +919,97 @@
                 width: 60% !important; /* 3x bigger than desktop (20% * 3 = 60%) */
             }
         }
+        
+        /* Expert Info Layout Styles */
+        .expert-info-desktop {
+            display: none;
+        }
+        
+        .expert-info-mobile {
+            display: block;
+        }
+        
+        .three-column-layout {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        .image-column {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            flex: 0 0 auto;
+        }
+        
+        .image-column img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto;
+            background-color: rgba(220, 220, 220, 1);
+        }
+        
+        .book-column {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex: 0 0 auto;
+        }
+        
+        .book-column .book-container {
+            display: inline-block;
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 2px dashed #dee2e6;
+            max-width: 400px;
+        }
+        
+        .book-column .book-container img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            margin-bottom: 1rem;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        @media (min-width: 768px) {
+            .expert-info-desktop {
+                display: block;
+            }
+            
+            .expert-info-mobile {
+                display: none !important;
+            }
+            
+            .three-column-layout {
+                display: flex;
+            }
+        }
+        
+        @media (max-width: 767px) {
+            .expert-info-desktop {
+                display: none !important;
+            }
+            
+            .expert-info-mobile {
+                display: block !important;
+            }
+            
+            .three-column-layout {
+                display: none !important;
+            }
+        }
     </style>
 </head>
 <body>
@@ -993,6 +1104,40 @@
                                         <div class="flex__item--md-12 flex__item--xs-12">
                                             <div class="widget">
                                                 <div class="lp-text-react lp-headline-react">
+                                                    <!-- Desktop/Tablet Version: 3-Column Layout -->
+                                                    <div class="expert-info-desktop">
+                                                        <div style="text-align: center; margin: 2rem 0;">
+                                                            <div style="background: rgba(220, 53, 69, 0.1); color: rgba(220, 53, 69, 1); padding: 0.5rem 1rem; border-radius: 6px; font-weight: bold; font-size: 0.9rem; display: inline-block;">Información verificada por expertos</div>
+                                                        </div>
+                                                        <div class="three-column-layout">
+                                                            <!-- Left Column: Case Studies 1, 2, 3 -->
+                                                            <div class="image-column">
+                                                                <img src="https://storage.googleapis.com/msgsndr/Lv5NLJtBSfr3Z3tUtwhW/media/69121a7dd200f0e9ab7afa84.jpeg" alt="Investigador Científico">
+                                                                <img src="https://storage.googleapis.com/msgsndr/Lv5NLJtBSfr3Z3tUtwhW/media/69121b1e40d024df77e93813.jpeg" alt="Emprendedor">
+                                                                <img src="https://storage.googleapis.com/msgsndr/Lv5NLJtBSfr3Z3tUtwhW/media/69121b830b647e4be8bab1b8.jpeg" alt="Ingeniero">
+                                                            </div>
+                                                            <!-- Center Column: Book Mockup -->
+                                                            <div class="book-column">
+                                                                <div class="book-container">
+                                                                    <img src="https://storage.googleapis.com/msgsndr/Lv5NLJtBSfr3Z3tUtwhW/media/6910f5acd1ba957f53dc2534.png" alt="PDF Guide">
+                                                                </div>
+                                                            </div>
+                                                            <!-- Right Column: Case Studies 4, 5, 6 -->
+                                                            <div class="image-column">
+                                                                <img src="https://storage.googleapis.com/msgsndr/Lv5NLJtBSfr3Z3tUtwhW/media/69121bcc8725443e22dc59af.jpeg" alt="Educador">
+                                                                <img src="https://storage.googleapis.com/msgsndr/Lv5NLJtBSfr3Z3tUtwhW/media/69121c11190e3126d396ce80.jpeg" alt="Profesional de Tecnología">
+                                                                <img src="https://storage.googleapis.com/msgsndr/Lv5NLJtBSfr3Z3tUtwhW/media/69121c4eb0326af6a05328b2.jpeg" alt="Profesional de Salud">
+                                                            </div>
+                                                        </div>
+                                                        <div style="text-align: center; margin-top: 2rem;">
+                                                            <button onclick="openCheckoutPopup()" class="css-1aextly" style="font-size: 1.3rem; padding: 15px; background: rgba(220, 53, 69, 1); border-color: rgba(220, 53, 69, 1); width: auto; display: inline-block;">
+                                                                👉 Obtener la Guía Profesional por $27 USD
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <!-- Mobile Version: Single Column with Book Mockup -->
+                                                    <div class="expert-info-mobile">
                                                         <div style="text-align: center; margin: 2rem 0;">
                                                             <div style="display: inline-block; background: #f8f9fa; padding: 2rem; border-radius: 12px; border: 2px dashed #dee2e6; margin-bottom: 2rem; max-width: 400px;">
                                                                 <img src="https://storage.googleapis.com/msgsndr/Lv5NLJtBSfr3Z3tUtwhW/media/6910f5acd1ba957f53dc2534.png" alt="PDF Guide" style="width: 100%; max-width: 300px; height: auto; margin-bottom: 1rem; display: block; margin-left: auto; margin-right: auto;">
@@ -1004,6 +1149,7 @@
                                                                 👉 Obtener la Guía Profesional por $27 USD
                                                             </button>
                                                         </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
