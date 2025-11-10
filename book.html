@@ -1642,7 +1642,8 @@
         <div class="checkout-popup">
             <button class="checkout-popup-close" onclick="closeCheckoutPopup()">&times;</button>
             <div id="checkout-popup-content">
-                <iframe src="https://link.fastpaydirect.com/payment-link/69122350e92ec1f948e85255" 
+                <iframe id="checkout-iframe" 
+                        src="https://link.fastpaydirect.com/payment-link/69122350e92ec1f948e85255" 
                         title="Payment Checkout" 
                         allow="payment" 
                         scrolling="yes">
@@ -1652,8 +1653,27 @@
     </div>
 
      <script>
+        // Function to get URL parameters from current page
+        function getUrlParameters() {
+            const params = new URLSearchParams(window.location.search);
+            const paramString = params.toString();
+            return paramString ? '?' + paramString : '';
+        }
+        
+        // Function to inject URL parameters into iframe
+        function injectUrlParametersIntoIframe() {
+            const iframe = document.getElementById('checkout-iframe');
+            if (iframe) {
+                const baseUrl = 'https://link.fastpaydirect.com/payment-link/69122350e92ec1f948e85255';
+                const urlParams = getUrlParameters();
+                iframe.src = baseUrl + urlParams;
+            }
+        }
+        
         // Checkout Popup JavaScript
         function openCheckoutPopup() {
+            // Inject URL parameters into iframe before opening popup
+            injectUrlParametersIntoIframe();
             document.getElementById('checkout-popup-overlay').classList.add('active');
             document.body.style.overflow = 'hidden';
         }
