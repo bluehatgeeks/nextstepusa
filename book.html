@@ -934,6 +934,21 @@
             height: 100%;
         }
         
+        /* Case Study Card Hover Effects */
+        .case-study-card {
+            transition: all 0.3s ease;
+        }
+        
+        .case-study-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            background-color: rgba(250, 246, 246, 1) !important;
+        }
+        
+        .case-study-card:active {
+            transform: translateY(-2px);
+        }
+        
         /* Mobile logo size - make it bigger */
         @media (max-width: 768px) {
             .lp-image-react.w-4891d6fe-0509-c85f-1fa6-8817ac1575c6 {
@@ -997,6 +1012,18 @@
             filter: grayscale(100%);
             opacity: 0.5;
             aspect-ratio: 1;
+            transition: all 0.3s ease;
+        }
+        
+        .image-column img:hover {
+            opacity: 0.8;
+            filter: grayscale(70%);
+            transform: scale(1.05);
+            cursor: pointer;
+        }
+        
+        .image-column img:active {
+            transform: scale(0.98);
         }
         
         @media (min-width: 768px) {
@@ -1035,6 +1062,18 @@
             max-width: 100%;
             width: 100%;
             box-sizing: border-box;
+            transition: all 0.3s ease;
+        }
+        
+        .book-column .book-container:hover {
+            transform: scale(1.02);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            border-color: rgba(220, 53, 69, 0.3);
+            cursor: pointer;
+        }
+        
+        .book-column .book-container:active {
+            transform: scale(0.98);
         }
         
         .book-column .book-container img {
@@ -1182,21 +1221,21 @@
                                                         <div class="three-column-layout">
                                                             <!-- Left Column: Case Studies 1, 2, 3 -->
                                                             <div class="image-column">
-                                                                <img src="https://storage.googleapis.com/msgsndr/Lv5NLJtBSfr3Z3tUtwhW/media/69121a7dd200f0e9ab7afa84.jpeg" alt="Investigador Científico">
-                                                                <img src="https://storage.googleapis.com/msgsndr/Lv5NLJtBSfr3Z3tUtwhW/media/69121b1e40d024df77e93813.jpeg" alt="Emprendedor">
-                                                                <img src="https://storage.googleapis.com/msgsndr/Lv5NLJtBSfr3Z3tUtwhW/media/69121b830b647e4be8bab1b8.jpeg" alt="Ingeniero">
+                                                                <img src="https://storage.googleapis.com/msgsndr/Lv5NLJtBSfr3Z3tUtwhW/media/69121a7dd200f0e9ab7afa84.jpeg" alt="Investigador Científico" onclick="openCheckoutPopup()" style="cursor: pointer;">
+                                                                <img src="https://storage.googleapis.com/msgsndr/Lv5NLJtBSfr3Z3tUtwhW/media/69121b1e40d024df77e93813.jpeg" alt="Emprendedor" onclick="openCheckoutPopup()" style="cursor: pointer;">
+                                                                <img src="https://storage.googleapis.com/msgsndr/Lv5NLJtBSfr3Z3tUtwhW/media/69121b830b647e4be8bab1b8.jpeg" alt="Ingeniero" onclick="openCheckoutPopup()" style="cursor: pointer;">
                                                             </div>
                                                             <!-- Center Column: Book Mockup -->
                                                             <div class="book-column">
-                                                                <div class="book-container">
+                                                                <div class="book-container" onclick="openCheckoutPopup()" style="cursor: pointer;">
                                                                     <img src="https://storage.googleapis.com/msgsndr/Lv5NLJtBSfr3Z3tUtwhW/media/6910f5acd1ba957f53dc2534.png" alt="PDF Guide">
                                                                 </div>
                                                             </div>
                                                             <!-- Right Column: Case Studies 4, 5, 6 -->
                                                             <div class="image-column">
-                                                                <img src="https://storage.googleapis.com/msgsndr/Lv5NLJtBSfr3Z3tUtwhW/media/69121bcc8725443e22dc59af.jpeg" alt="Educador">
-                                                                <img src="https://storage.googleapis.com/msgsndr/Lv5NLJtBSfr3Z3tUtwhW/media/69121c11190e3126d396ce80.jpeg" alt="Profesional de Tecnología">
-                                                                <img src="https://storage.googleapis.com/msgsndr/Lv5NLJtBSfr3Z3tUtwhW/media/69121c4eb0326af6a05328b2.jpeg" alt="Profesional de Salud">
+                                                                <img src="https://storage.googleapis.com/msgsndr/Lv5NLJtBSfr3Z3tUtwhW/media/69121bcc8725443e22dc59af.jpeg" alt="Educador" onclick="openCheckoutPopup()" style="cursor: pointer;">
+                                                                <img src="https://storage.googleapis.com/msgsndr/Lv5NLJtBSfr3Z3tUtwhW/media/69121c11190e3126d396ce80.jpeg" alt="Profesional de Tecnología" onclick="openCheckoutPopup()" style="cursor: pointer;">
+                                                                <img src="https://storage.googleapis.com/msgsndr/Lv5NLJtBSfr3Z3tUtwhW/media/69121c4eb0326af6a05328b2.jpeg" alt="Profesional de Salud" onclick="openCheckoutPopup()" style="cursor: pointer;">
                                                             </div>
                                                         </div>
                                                         <div style="text-align: center; margin-top: 2rem;">
@@ -1209,7 +1248,7 @@
                                                     <!-- Mobile Version: Single Column with Book Mockup -->
                                                     <div class="expert-info-mobile">
                                                         <div style="text-align: center; margin: 2rem 0;">
-                                                            <div style="display: inline-block; background: #f8f9fa; padding: 2rem; border-radius: 12px; border: 2px dashed #dee2e6; margin-bottom: 2rem; max-width: 400px;">
+                                                            <div onclick="openCheckoutPopup()" style="display: inline-block; background: #f8f9fa; padding: 2rem; border-radius: 12px; border: 2px dashed #dee2e6; margin-bottom: 2rem; max-width: 400px; cursor: pointer; transition: all 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'; this.style.boxShadow='0 4px 12px rgba(0, 0, 0, 0.15)'; this.style.borderColor='rgba(220, 53, 69, 0.3)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none'; this.style.borderColor='#dee2e6';">
                                                                 <img src="https://storage.googleapis.com/msgsndr/Lv5NLJtBSfr3Z3tUtwhW/media/6910f5acd1ba957f53dc2534.png" alt="PDF Guide" style="width: 100%; max-width: 300px; height: auto; margin-bottom: 1rem; display: block; margin-left: auto; margin-right: auto;">
                                                                 <div style="background: rgba(220, 53, 69, 0.1); color: rgba(220, 53, 69, 1); padding: 0.5rem 1rem; border-radius: 6px; font-weight: bold; font-size: 0.9rem; display: inline-block;">Información verificada por expertos</div>
                                                             </div>
@@ -1426,7 +1465,7 @@
                                         <div class="widget-row flex flex--12" style="margin-top: 2rem;">
                                             <!-- Case Study 1 -->
                                             <div class="flex__item--md-6 flex__item--xs-12" style="margin-bottom: 2rem; padding: 0 1rem;">
-                                                <div class="widget" style="background-color: rgba(245, 241, 241, 1); border-radius: 16px; padding: 2rem; height: 100%;">
+                                                <div class="widget case-study-card" style="background-color: rgba(245, 241, 241, 1); border-radius: 16px; padding: 2rem; height: 100%; cursor: pointer;" onclick="openCheckoutPopup()">
                                                     <div style="text-align: center; margin-bottom: 1.5rem;">
                                                         <img src="https://storage.googleapis.com/msgsndr/Lv5NLJtBSfr3Z3tUtwhW/media/69121a7dd200f0e9ab7afa84.jpeg" alt="Investigador Científico" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin: 0 auto; display: block; background-color: rgba(220, 220, 220, 1);" />
                                                     </div>
@@ -1445,7 +1484,7 @@
                                             </div>
                                             <!-- Case Study 2 -->
                                             <div class="flex__item--md-6 flex__item--xs-12" style="margin-bottom: 2rem; padding: 0 1rem;">
-                                                <div class="widget" style="background-color: rgba(245, 241, 241, 1); border-radius: 16px; padding: 2rem; height: 100%;">
+                                                <div class="widget case-study-card" style="background-color: rgba(245, 241, 241, 1); border-radius: 16px; padding: 2rem; height: 100%; cursor: pointer;" onclick="openCheckoutPopup()">
                                                     <div style="text-align: center; margin-bottom: 1.5rem;">
                                                         <img src="https://storage.googleapis.com/msgsndr/Lv5NLJtBSfr3Z3tUtwhW/media/69121b1e40d024df77e93813.jpeg" alt="Emprendedor" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin: 0 auto; display: block; background-color: rgba(220, 220, 220, 1);" />
                                                     </div>
@@ -1464,7 +1503,7 @@
                                             </div>
                                             <!-- Case Study 3 -->
                                             <div class="flex__item--md-6 flex__item--xs-12" style="margin-bottom: 2rem; padding: 0 1rem;">
-                                                <div class="widget" style="background-color: rgba(245, 241, 241, 1); border-radius: 16px; padding: 2rem; height: 100%;">
+                                                <div class="widget case-study-card" style="background-color: rgba(245, 241, 241, 1); border-radius: 16px; padding: 2rem; height: 100%; cursor: pointer;" onclick="openCheckoutPopup()">
                                                     <div style="text-align: center; margin-bottom: 1.5rem;">
                                                         <img src="https://storage.googleapis.com/msgsndr/Lv5NLJtBSfr3Z3tUtwhW/media/69121b830b647e4be8bab1b8.jpeg" alt="Ingeniero" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin: 0 auto; display: block; background-color: rgba(220, 220, 220, 1);" />
                                                     </div>
@@ -1483,7 +1522,7 @@
                                             </div>
                                             <!-- Case Study 4 -->
                                             <div class="flex__item--md-6 flex__item--xs-12" style="margin-bottom: 2rem; padding: 0 1rem;">
-                                                <div class="widget" style="background-color: rgba(245, 241, 241, 1); border-radius: 16px; padding: 2rem; height: 100%;">
+                                                <div class="widget case-study-card" style="background-color: rgba(245, 241, 241, 1); border-radius: 16px; padding: 2rem; height: 100%; cursor: pointer;" onclick="openCheckoutPopup()">
                                                     <div style="text-align: center; margin-bottom: 1.5rem;">
                                                         <img src="https://storage.googleapis.com/msgsndr/Lv5NLJtBSfr3Z3tUtwhW/media/69121bcc8725443e22dc59af.jpeg" alt="Educador" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin: 0 auto; display: block; background-color: rgba(220, 220, 220, 1);" />
                                                     </div>
@@ -1502,7 +1541,7 @@
                                             </div>
                                             <!-- Case Study 5 -->
                                             <div class="flex__item--md-6 flex__item--xs-12" style="margin-bottom: 2rem; padding: 0 1rem;">
-                                                <div class="widget" style="background-color: rgba(245, 241, 241, 1); border-radius: 16px; padding: 2rem; height: 100%;">
+                                                <div class="widget case-study-card" style="background-color: rgba(245, 241, 241, 1); border-radius: 16px; padding: 2rem; height: 100%; cursor: pointer;" onclick="openCheckoutPopup()">
                                                     <div style="text-align: center; margin-bottom: 1.5rem;">
                                                         <img src="https://storage.googleapis.com/msgsndr/Lv5NLJtBSfr3Z3tUtwhW/media/69121c11190e3126d396ce80.jpeg" alt="Profesional de Tecnología" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin: 0 auto; display: block; background-color: rgba(220, 220, 220, 1);" />
                                                     </div>
@@ -1521,7 +1560,7 @@
                                             </div>
                                             <!-- Case Study 6 -->
                                             <div class="flex__item--md-6 flex__item--xs-12" style="margin-bottom: 2rem; padding: 0 1rem;">
-                                                <div class="widget" style="background-color: rgba(245, 241, 241, 1); border-radius: 16px; padding: 2rem; height: 100%;">
+                                                <div class="widget case-study-card" style="background-color: rgba(245, 241, 241, 1); border-radius: 16px; padding: 2rem; height: 100%; cursor: pointer;" onclick="openCheckoutPopup()">
                                                     <div style="text-align: center; margin-bottom: 1.5rem;">
                                                         <img src="https://storage.googleapis.com/msgsndr/Lv5NLJtBSfr3Z3tUtwhW/media/69121c4eb0326af6a05328b2.jpeg" alt="Profesional de Salud" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin: 0 auto; display: block; background-color: rgba(220, 220, 220, 1);" />
                                                     </div>
