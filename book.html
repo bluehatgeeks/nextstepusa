@@ -12,6 +12,9 @@
         margin: 0; 
         padding: 0; 
         background-color: white !important;
+        overflow-x: hidden;
+        width: 100%;
+        max-width: 100%;
     }
     img, video, iframe { max-width: 100%; height: auto; display: block; }
     
@@ -193,6 +196,8 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 15px;
+            box-sizing: border-box;
+            overflow-x: hidden;
         }
         
         /* Full width container override for opt-in section */
@@ -923,20 +928,30 @@
         /* Expert Info Layout Styles */
         .expert-info-desktop {
             display: none;
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
+            box-sizing: border-box;
         }
         
         .expert-info-mobile {
             display: block;
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
+            box-sizing: border-box;
         }
         
         .three-column-layout {
             display: flex;
             justify-content: center;
-            align-items: flex-start;
-            gap: 2rem;
-            max-width: 1200px;
+            align-items: stretch;
+            gap: 1.5rem;
+            max-width: 100%;
+            width: 100%;
             margin: 0 auto;
             padding: 0 1rem;
+            box-sizing: border-box;
         }
         
         .image-column {
@@ -944,16 +959,44 @@
             flex-direction: column;
             gap: 1.5rem;
             flex: 0 0 auto;
+            align-items: center;
+            justify-content: space-between;
+            align-self: stretch;
+            min-width: 0;
+            height: 100%;
         }
         
         .image-column img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
+            width: auto;
+            flex: 1 1 auto;
+            min-height: 80px;
+            min-width: 80px;
+            max-width: 150px;
+            max-height: 100%;
+            border-radius: 12px;
             object-fit: cover;
             display: block;
             margin: 0 auto;
             background-color: rgba(220, 220, 220, 1);
+            filter: grayscale(100%);
+            opacity: 0.5;
+            aspect-ratio: 1;
+        }
+        
+        @media (min-width: 768px) {
+            .image-column img {
+                min-height: 100px;
+                min-width: 100px;
+                max-width: 150px;
+            }
+        }
+        
+        @media (max-width: 767px) {
+            .image-column img {
+                min-height: 80px;
+                min-width: 80px;
+                max-width: 100px;
+            }
         }
         
         .book-column {
@@ -962,15 +1005,20 @@
             align-items: center;
             justify-content: center;
             flex: 0 0 auto;
+            min-width: 0;
         }
         
         .book-column .book-container {
-            display: inline-block;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             background: #f8f9fa;
             padding: 2rem;
             border-radius: 12px;
             border: 2px dashed #dee2e6;
-            max-width: 400px;
+            max-width: 100%;
+            width: 100%;
+            box-sizing: border-box;
         }
         
         .book-column .book-container img {
@@ -994,6 +1042,12 @@
             
             .three-column-layout {
                 display: flex;
+                gap: 2rem;
+                max-width: 1200px;
+            }
+            
+            .book-column .book-container {
+                max-width: 400px;
             }
         }
         
