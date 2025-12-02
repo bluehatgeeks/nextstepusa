@@ -964,6 +964,23 @@
             }
         }
         
+        /* Mobile-only book thumbnail */
+        .mobile-book-thumbnail {
+            display: none;
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-book-thumbnail {
+                display: block;
+            }
+        }
+        
+        @media (min-width: 769px) {
+            .mobile-book-thumbnail {
+                display: none !important;
+            }
+        }
+        
         /* Expert Info Layout Styles */
         .expert-info-desktop {
             display: none;
@@ -1181,6 +1198,15 @@
                                                     <h1 class="lp-headline text-align-center font-scale-10 line-height-scale-6 headline" style="margin-bottom: 1.5rem; font-size: 3.75rem; text-transform: uppercase; line-height: 1.2;">
                                                         <span style="color: rgba(220, 53, 69, 1);"><span style="font-family: &quot;Inter&quot;, sans-serif;"><strong>Descubre lo que te cobrarían $200 USD los abogados de inmigración… por solo $27 USD.</strong></span></span>
                                                     </h1>
+                                                    <!-- Mobile-only book thumbnail -->
+                                                    <div class="mobile-book-thumbnail" style="text-align: center; margin-bottom: 1.5rem;">
+                                                        <img src="https://storage.googleapis.com/msgsndr/Lv5NLJtBSfr3Z3tUtwhW/media/6910f5acd1ba957f53dc2534.png" 
+                                                             alt="PDF Guide" 
+                                                             onclick="openCheckoutPopup()" 
+                                                             style="width: 80px; height: auto; cursor: pointer; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); transition: transform 0.3s ease, box-shadow 0.3s ease;"
+                                                             onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 6px 16px rgba(0, 0, 0, 0.2)';"
+                                                             onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 12px rgba(0, 0, 0, 0.15)';">
+                                                    </div>
                                                         <p class="text-align-center font-scale-5 line-height-scale-6 gutter-bottom-1" style="margin-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto;">
                                                             <span style="color: rgb(5, 40, 101);"><span style="font-family: &quot;Inter&quot;, sans-serif;">Esta guía revela exactamente qué necesitas para saber si tu perfil califica para vivir y trabajar legalmente en EE. UU. — sin pagar consultas costosas ni perder meses investigando.</span></span>
                                                         </p>
