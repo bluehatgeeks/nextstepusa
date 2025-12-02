@@ -1168,9 +1168,137 @@
                 min-width: 260px !important;
             }
         }
+        
+        /* Password Protection Styles */
+        .password-protection-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(5, 40, 101, 0.95) 0%, rgba(3, 21, 54, 0.95) 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10000;
+            backdrop-filter: blur(10px);
+        }
+        
+        .password-protection-overlay.hidden {
+            display: none;
+        }
+        
+        .password-form-container {
+            background: white;
+            padding: 3rem;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 450px;
+            width: 90%;
+            text-align: center;
+        }
+        
+        .password-form-container h2 {
+            color: rgba(220, 53, 69, 1);
+            font-family: 'Inter', sans-serif;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .password-form-container p {
+            color: rgb(5, 40, 101);
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        
+        .password-input-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .password-input-group input {
+            width: 100%;
+            padding: 15px 20px;
+            font-size: 1.1rem;
+            border: 2px solid rgba(220, 53, 69, 0.3);
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
+            transition: all 0.3s ease;
+            box-sizing: border-box;
+        }
+        
+        .password-input-group input:focus {
+            outline: none;
+            border-color: rgba(220, 53, 69, 1);
+            box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.1);
+        }
+        
+        .password-error {
+            color: rgba(220, 53, 69, 1);
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+            display: none;
+        }
+        
+        .password-error.show {
+            display: block;
+        }
+        
+        .password-submit-btn {
+            width: 100%;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: white;
+            background: linear-gradient(135deg, rgba(220, 53, 69, 1) 0%, rgba(200, 35, 51, 1) 100%);
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .password-submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(220, 53, 69, 0.3);
+        }
+        
+        .password-submit-btn:active {
+            transform: translateY(0);
+        }
+        
+        .main-content-protected {
+            display: none;
+        }
+        
+        .main-content-protected.authenticated {
+            display: block;
+        }
     </style>
 </head>
 <body>
+    <!-- Password Protection Overlay -->
+    <div id="password-protection-overlay" class="password-protection-overlay">
+        <div class="password-form-container">
+            <h2>Acceso Protegido</h2>
+            <p>Por favor, ingresa la contraseña para acceder a tu guía.</p>
+            <form id="password-form" onsubmit="checkPassword(event)">
+                <div class="password-input-group">
+                    <input type="password" id="password-input" placeholder="Ingresa la contraseña" required autofocus>
+                    <div id="password-error" class="password-error">Contraseña incorrecta. Por favor, intenta de nuevo.</div>
+                </div>
+                <button type="submit" class="password-submit-btn">Acceder</button>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Main Content (Protected) -->
+    <div id="main-content" class="main-content-protected">
     <!-- Logo Section -->
     <div class="container" id="header" style="background-color: white;">
         <div class="layout flex flex--12" data-guid="dbe54627-895f-2838-3ffa-35e3c1c56aff">
@@ -1458,5 +1586,98 @@
         })();
     </script>
     
+    <!-- Password Protection Script -->
+    <script>
+        const CORRECT_PASSWORD = 'C0mpra!2@25';
+        const AUTH_STORAGE_KEY = 'book_download_authenticated';
+        
+        // Check if already authenticated in this session
+        function isAuthenticated() {
+            return sessionStorage.getItem(AUTH_STORAGE_KEY) === 'true';
+        }
+        
+        // Set authentication status
+        function setAuthenticated() {
+            sessionStorage.setItem(AUTH_STORAGE_KEY, 'true');
+        }
+        
+        // Check password from URL parameter
+        function checkUrlPassword() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const passwordParam = urlParams.get('password');
+            
+            // Handle both encoded and non-encoded passwords
+            if (passwordParam) {
+                // Try direct comparison first
+                if (passwordParam === CORRECT_PASSWORD) {
+                    setAuthenticated();
+                    showContent();
+                    return true;
+                }
+                // Try URL decoded comparison
+                try {
+                    const decoded = decodeURIComponent(passwordParam);
+                    if (decoded === CORRECT_PASSWORD) {
+                        setAuthenticated();
+                        showContent();
+                        return true;
+                    }
+                } catch (e) {
+                    // If decoding fails, continue
+                }
+            }
+            return false;
+        }
+        
+        // Check password from form
+        function checkPassword(event) {
+            event.preventDefault();
+            const input = document.getElementById('password-input');
+            const password = input.value;
+            const errorDiv = document.getElementById('password-error');
+            
+            if (password === CORRECT_PASSWORD) {
+                setAuthenticated();
+                showContent();
+            } else {
+                errorDiv.classList.add('show');
+                input.value = '';
+                input.focus();
+                // Hide error after 3 seconds
+                setTimeout(() => {
+                    errorDiv.classList.remove('show');
+                }, 3000);
+            }
+        }
+        
+        // Show main content and hide password overlay
+        function showContent() {
+            document.getElementById('password-protection-overlay').classList.add('hidden');
+            document.getElementById('main-content').classList.add('authenticated');
+        }
+        
+        // Initialize password protection
+        function initPasswordProtection() {
+            // Check if already authenticated
+            if (isAuthenticated()) {
+                showContent();
+                return;
+            }
+            
+            // Check URL parameter first
+            if (checkUrlPassword()) {
+                return;
+            }
+            
+            // If not authenticated and no URL param, show password form
+            document.getElementById('password-protection-overlay').classList.remove('hidden');
+            document.getElementById('password-input').focus();
+        }
+        
+        // Run on page load
+        document.addEventListener('DOMContentLoaded', initPasswordProtection);
+    </script>
+    
+    </div> <!-- End main-content -->
 </body>
 </html>
