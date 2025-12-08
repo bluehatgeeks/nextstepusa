@@ -1144,6 +1144,37 @@
                 display: none !important;
             }
         }
+        
+        /* PDF Preview Mobile Responsive Styles */
+        @media (max-width: 768px) {
+            .pdf-preview-container {
+                display: none !important;
+            }
+            
+            .pdf-mobile-download {
+                display: block !important;
+            }
+            
+            .pdf-preview-iframe {
+                height: 400px !important;
+            }
+        }
+        
+        @media (min-width: 769px) {
+            .pdf-mobile-download {
+                display: none !important;
+            }
+            
+            .pdf-preview-container {
+                display: flex !important;
+            }
+        }
+        
+        @media (max-width: 1024px) and (min-width: 769px) {
+            .pdf-preview-iframe {
+                height: 500px !important;
+            }
+        }
     </style>
     
     <!-- Meta Pixel Code -->
@@ -1369,8 +1400,22 @@
                                     <div class="widget-row flex flex--12" style="margin-top: 2rem;">
                                         <div class="flex__item--md-12 flex__item--xs-12">
                                             <div class="widget">
-                                                <div style="text-align: center; margin: 2rem 0; display: flex; justify-content: center; align-items: center;">
+                                                <!-- Mobile Download Link -->
+                                                <div class="pdf-mobile-download" style="display: none; text-align: center; margin: 2rem 0;">
+                                                    <p style="color: rgba(5, 40, 101, 1); font-family: 'Inter', sans-serif; font-size: 1rem; margin-bottom: 1rem; font-weight: 600;">
+                                                        Vista previa del índice del libro:
+                                                    </p>
+                                                    <a href="outline.pdf" download style="display: inline-block; padding: 15px 30px; background-color: rgba(220, 53, 69, 1); color: white; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 1.1rem; font-family: 'Inter', sans-serif;">
+                                                        📄 Ver/Descargar PDF
+                                                    </a>
+                                                </div>
+                                                <!-- Desktop/Tablet PDF Preview -->
+                                                <div class="pdf-preview-container" style="text-align: center; margin: 2rem 0; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                                                    <p style="color: rgba(5, 40, 101, 1); font-family: 'Inter', sans-serif; font-size: 1rem; margin-bottom: 1rem; font-weight: 600;">
+                                                        Vista previa del índice del libro:
+                                                    </p>
                                                     <iframe src="outline.pdf" 
+                                                            class="pdf-preview-iframe"
                                                             style="width: 100%; max-width: 800px; height: 600px; border: 2px solid rgba(5, 40, 101, 0.2); border-radius: 8px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); display: block; margin: 0 auto;"
                                                             title="PDF Preview">
                                                     </iframe>
