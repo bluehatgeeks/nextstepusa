@@ -1,0 +1,84 @@
+{
+  "header": {
+    "title": "Start Your Journey to U.S. Permanent Residency Today!",
+    "subtitle": "Simply input your email below to get started with your",
+    "ctaText": "START MY FREE VISA PROFILE REVIEW",
+    "logo": "assets/asset_10.png"
+  },
+  "benefits": {
+    "title": "Why Choose EB-2 NIW Visa?",
+    "items": [
+      {
+        "title": "No Job Offer Required",
+        "description": "Unlike other visa categories, EB-2 NIW doesn't require a specific job offer from a U.S. employer."
+      },
+      {
+        "title": "Self-Petition",
+        "description": "You can file your own petition without needing an employer sponsor."
+      },
+      {
+        "title": "Permanent Residency",
+        "description": "Direct path to U.S. permanent residency (green card) for you and your family."
+      }
+    ]
+  },
+  "process": {
+    "title": "How It Works",
+    "steps": [
+      {
+        "number": 1,
+        "title": "Free Evaluation",
+        "description": "Complete our free profile evaluation to assess your eligibility."
+      },
+      {
+        "number": 2,
+        "title": "Document Preparation",
+        "description": "We help you gather and prepare all required documentation."
+      },
+      {
+        "number": 3,
+        "title": "Petition Filing",
+        "description": "We file your EB-2 NIW petition with USCIS."
+      },
+      {
+        "number": 4,
+        "title": "Approval & Residency",
+        "description": "Upon approval, you can apply for permanent residency."
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Success Stories",
+    "items": [
+      {
+        "quote": "NextStep USA made my EB-2 NIW application process smooth and successful. I'm now a permanent resident!",
+        "author": "Dr. Maria Rodriguez, Research Scientist"
+      },
+      {
+        "quote": "Professional, knowledgeable, and results-driven. Highly recommend their services.",
+        "author": "Dr. Ahmed Hassan, Software Engineer"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Start Your Journey?",
+    "subtitle": "Simply input your email below to get started with your",
+    "formAction": "https://api.leadpages.io/integration/v1/forms/9VMjf6tVkJFYaJyoiEhwNQ/submissions",
+    "buttonText": "START MY FREE VISA PROFILE REVIEW"
+  },
+  "footer": {
+    "copyright": "© 2025 All rights reserved",
+    "company": "NextStep USA",
+    "address": "COLOMBO & HURD, PL",
+    "links": [
+      {
+        "text": "Privacy Policy",
+        "url": "assets/colombohurdlaw.com/privacy-policy/index.html"
+      },
+      {
+        "text": "Site Map",
+        "url": "assets/colombohurdlaw.com/sitemap.xml"
+      }
+    ]
+  }
+}

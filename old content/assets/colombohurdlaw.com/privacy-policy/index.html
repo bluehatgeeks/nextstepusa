@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+<head>
+	<meta charset="UTF-8">
+<script>
+var gform;gform||(document.addEventListener("gform_main_scripts_loaded",function(){gform.scriptsLoaded=!0}),document.addEventListener("gform/theme/scripts_loaded",function(){gform.themeScriptsLoaded=!0}),window.addEventListener("DOMContentLoaded",function(){gform.domLoaded=!0}),gform={domLoaded:!1,scriptsLoaded:!1,themeScriptsLoaded:!1,isFormEditor:()=>"function"==typeof InitializeEditor,callIfLoaded:function(o){return!(!gform.domLoaded||!gform.scriptsLoaded||!gform.themeScriptsLoaded&&!gform.isFormEditor()||(gform.isFormEditor()&&console.warn("The use of gform.initializeOnLoaded() is deprecated in the form editor context and will be removed in Gravity Forms 3.1."),o(),0))},initializeOnLoaded:function(o){gform.callIfLoaded(o)||(document.addEventListener("gform_main_scripts_loaded",()=>{gform.scriptsLoaded=!0,gform.callIfLoaded(o)}),document.addEventListener("gform/theme/scripts_loaded",()=>{gform.themeScriptsLoaded=!0,gform.callIfLoaded(o)}),window.addEventListener("DOMContentLoaded",()=>{gform.domLoaded=!0,gform.callIfLoaded(o)}))},hooks:{action:{},filter:{}},addAction:function(o,r,e,t){gform.addHook("action",o,r,e,t)},addFilter:function(o,r,e,t){gform.addHook("filter",o,r,e,t)},doAction:function(o){gform.doHook("action",o,arguments)},applyFilters:function(o){return gform.doHook("filter",o,arguments)},removeAction:function(o,r){gform.removeHook("action",o,r)},removeFilter:function(o,r,e){gform.removeHook("filter",o,r,e)},addHook:function(o,r,e,t,n){null==gform.hooks[o][r]&&(gform.hooks[o][r]=[]);var d=gform.hooks[o][r];null==n&&(n=r+"_"+d.length),gform.hooks[o][r].push({tag:n,callable:e,priority:t=null==t?10:t})},doHook:function(r,o,e){var t;if(e=Array.prototype.slice.call(e,1),null!=gform.hooks[r][o]&&((o=gform.hooks[r][o]).sort(function(o,r){return o.priority-r.priority}),o.forEach(function(o){"function"!=typeof(t=o.callable)&&(t=window[t]),"action"==r?t.apply(null,e):e[0]=t.apply(null,e)})),"filter"==r)return e[0]},removeHook:function(o,r,t,n){var e;null!=gform.hooks[o][r]&&(e=(e=gform.hooks[o][r]).filter(function(o,r,e){return!!(null!=n&&n!=o.tag||null!=t&&t!=o.priority)}),gform.hooks[o][r]=e)}});
+</script>
+
+	    <script>
+        (function() {
+            function updateSiteHeaderOffset() {
+                var body = document.body;
+                var site = document.querySelector('.site');
+                var header = document.querySelector('.site-header');
+                // console.lo the site-header height
+                console.log(header.offsetHeight);
+                if (!site) return;
+                if (body.classList.contains('header-alt') && header) {
+                    body.style.setProperty('--site-header-height', header.offsetHeight + 'px');
+                }
+            }
+            document.addEventListener('DOMContentLoaded', updateSiteHeaderOffset);
+            window.addEventListener('resize', updateSiteHeaderOffset);
+
+
+            window.addEventListener('scroll', function() {
+                var header = document.querySelector('.site-header');
+                if (!header) return;
+
+                var scrollPosition = window.scrollY;
+                var headerHeight = header.offsetHeight;
+
+                if (scrollPosition > headerHeight) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+
+        })();
+    </script>
+<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- This site is optimized with the Yoast SEO plugin v25.7 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Privacy Policy and Disclaimer</title><link rel="preload" href="https://www.colombohurdlaw.com/wp-content/uploads/2025/05/logo.svg" as="image" fetchpriority="high" /><link rel="preload" href="https://www.colombohurdlaw.com/wp-content/uploads/2025/03/CTA-Background-1920x371.jpg" as="image" imagesrcset="https://www.colombohurdlaw.com/wp-content/uploads/2025/03/CTA-Background-1920x371.jpg 1920w, https://www.colombohurdlaw.com/wp-content/uploads/2025/03/CTA-Background-768x148.jpg 768w, https://www.colombohurdlaw.com/wp-content/uploads/2025/03/CTA-Background-1270x245.jpg 1270w, https://www.colombohurdlaw.com/wp-content/uploads/2025/03/CTA-Background-430x83.jpg 430w, https://www.colombohurdlaw.com/wp-content/uploads/2025/03/CTA-Background-1536x297.jpg 1536w, https://www.colombohurdlaw.com/wp-content/uploads/2025/03/CTA-Background-2048x396.jpg 2048w, https://www.colombohurdlaw.com/wp-content/uploads/2025/03/CTA-Background-1440x278.jpg 1440w" imagesizes="auto, (max-width: 1920px) 100vw, 1920px" fetchpriority="high" /><link rel="preload" href="https://www.colombohurdlaw.com/wp-content/themes/generatepress/assets/css/main.min.css?ver=3.6.0.1754526784" as="style" onload="this.rel='stylesheet';this.removeAttribute('onload');" fetchpriority="high"><link rel="preload" href="https://www.colombohurdlaw.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1.1754526784" as="script" fetchpriority="high"><link rel="preload" href="https://www.colombohurdlaw.com/wp-content/themes/sayenko-colombo/build/styles/splide.css" as="style" onload="this.rel='stylesheet';this.removeAttribute('onload');" fetchpriority="high"><link rel="preload" href="https://www.colombohurdlaw.com/wp-content/uploads/generatepress/fonts/fonts.css?ver=1750347687.1754527067" as="style" onload="this.rel='stylesheet';this.removeAttribute('onload');" fetchpriority="high">
+	<link rel="canonical" href="https://www.colombohurdlaw.com/privacy-policy/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Privacy Policy and Disclaimer" />
+	<meta property="og:description" content="The information on this website is for general information purposes only. Nothing on this site should be taken as legal advice for any individual case or situation. This information is not intended to create, and receipt or viewing does not constitute, an attorney-client relationship. © 2016 Colombo &amp; Hurd, PL. All rights reserved This privacy ... Read more" />
+	<meta property="og:url" content="https://www.colombohurdlaw.com/privacy-policy/" />
+	<meta property="og:site_name" content="Colombo &amp; Hurd, PL" />
+	<meta property="article:modified_time" content="2025-07-12T01:51:23+00:00" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:label1" content="Est. reading time" />
+	<meta name="twitter:data1" content="6 minutes" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.colombohurdlaw.com/privacy-policy/","url":"https://www.colombohurdlaw.com/privacy-policy/","name":"Privacy Policy and Disclaimer","isPartOf":{"@id":"https://www.colombohurdlaw.com/#website"},"datePublished":"2025-03-01T17:23:30+00:00","dateModified":"2025-07-12T01:51:23+00:00","breadcrumb":{"@id":"https://www.colombohurdlaw.com/privacy-policy/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://www.colombohurdlaw.com/privacy-policy/"]}]},{"@type":"BreadcrumbList","@id":"https://www.colombohurdlaw.com/privacy-policy/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.colombohurdlaw.com/"},{"@type":"ListItem","position":2,"name":"Privacy Policy"}]},{"@type":"WebSite","@id":"https://www.colombohurdlaw.com/#website","url":"https://www.colombohurdlaw.com/","name":"Colombo &amp; Hurd, PL","description":"","publisher":{"@id":"https://www.colombohurdlaw.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.colombohurdlaw.com/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https://www.colombohurdlaw.com/#organization","name":"Colombo &amp; Hurd, PL","url":"https://www.colombohurdlaw.com/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://www.colombohurdlaw.com/#/schema/logo/image/","url":"https://www.colombohurdlaw.com/wp-content/uploads/2025/05/logo.svg","contentUrl":"https://www.colombohurdlaw.com/wp-content/uploads/2025/05/logo.svg","width":218,"height":40,"caption":"Colombo &amp; Hurd, PL"},"image":{"@id":"https://www.colombohurdlaw.com/#/schema/logo/image/"}}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel="alternate" type="application/rss+xml" title="Colombo &amp; Hurd, PL &raquo; Feed" href="https://www.colombohurdlaw.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Colombo &amp; Hurd, PL &raquo; Comments Feed" href="https://www.colombohurdlaw.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Colombo &amp; Hurd, PL &raquo; Privacy Policy Comments Feed" href="https://www.colombohurdlaw.com/privacy-policy/feed/" />
+<script>
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.colombohurdlaw.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.8.2.1755881357"}};
+/*! This file is auto-generated */
+!function(s,n){var o,i,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),a=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===a[t]})}function u(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);for(var n=e.getImageData(16,16,1,1),a=0;a<n.data.length;a++)if(0!==n.data[a])return!1;return!0}function f(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\udedf")}return!1}function g(e,t,n,a){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):s.createElement("canvas"),o=r.getContext("2d",{willReadFrequently:!0}),i=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(function(e){i[e]=t(o,e,n,a)}),i}function t(e){var t=s.createElement("script");t.src=e,t.defer=!0,s.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",i=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){s.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+g.toString()+"("+[JSON.stringify(i),f.toString(),p.toString(),u.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"}),r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=function(e){c(n=e.data),r.terminate(),t(n)})}catch(e){}c(n=g(i,f,p,u))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+</script>
+<link rel='stylesheet' id='generatepress-fonts-css' href='https://www.colombohurdlaw.com/wp-content/uploads/generatepress/fonts/fonts.css?ver=1750347687.1755881357' media='all' />
+<style id='wp-emoji-styles-inline-css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<style id='wp-block-library-inline-css'>
+:root{--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,161;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px;--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color)}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}.has-text-align-center{text-align:center}.has-text-align-left{text-align:left}.has-text-align-right{text-align:right}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-wrap:normal!important}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+</style>
+<link rel='stylesheet' id='wpml-legacy-horizontal-list-0-css' href='https://www.colombohurdlaw.com/wp-content/plugins/sitepress-multilingual-cms/templates/language-switchers/legacy-list-horizontal/style.min.css?ver=1.1755881357' media='all' />
+<style id='wpml-legacy-horizontal-list-0-inline-css'>
+.wpml-ls-statics-footer a, .wpml-ls-statics-footer .wpml-ls-sub-menu a, .wpml-ls-statics-footer .wpml-ls-sub-menu a:link, .wpml-ls-statics-footer li:not(.wpml-ls-current-language) .wpml-ls-link, .wpml-ls-statics-footer li:not(.wpml-ls-current-language) .wpml-ls-link:link {color:#444444;background-color:#ffffff;}.wpml-ls-statics-footer .wpml-ls-sub-menu a:hover,.wpml-ls-statics-footer .wpml-ls-sub-menu a:focus, .wpml-ls-statics-footer .wpml-ls-sub-menu a:link:hover, .wpml-ls-statics-footer .wpml-ls-sub-menu a:link:focus {color:#000000;background-color:#eeeeee;}.wpml-ls-statics-footer .wpml-ls-current-language > a {color:#444444;background-color:#ffffff;}.wpml-ls-statics-footer .wpml-ls-current-language:hover>a, .wpml-ls-statics-footer .wpml-ls-current-language>a:focus {color:#000000;background-color:#eeeeee;}
+</style>
+<link rel='stylesheet' id='wpml-menu-item-0-css' href='https://www.colombohurdlaw.com/wp-content/plugins/sitepress-multilingual-cms/templates/language-switchers/menu-item/style.min.css?ver=1.1755881357' media='all' />
+<link rel='stylesheet' id='generate-style-css' href='https://www.colombohurdlaw.com/wp-content/themes/generatepress/assets/css/main.min.css?ver=3.6.0.1755881357' media='all' />
+<style id='generate-style-inline-css'>
+@media (max-width:768px){}
+body{background-color:var(--white);color:var(--grey);}a{color:var(--secondary);}a:hover, a:focus, a:active{color:var(--primary);}.wp-block-group__inner-container{max-width:1200px;margin-left:auto;margin-right:auto;}:root{--black:#000000;--primary:#031536;--secondary:#052865;--dark-grey:#252b33;--grey:#4a4a4a;--light-blue:#e5e7f3;--gold:#cf9f6c;--white:#ffffff;}:root .has-black-color{color:var(--black);}:root .has-black-background-color{background-color:var(--black);}:root .has-primary-color{color:var(--primary);}:root .has-primary-background-color{background-color:var(--primary);}:root .has-secondary-color{color:var(--secondary);}:root .has-secondary-background-color{background-color:var(--secondary);}:root .has-dark-grey-color{color:var(--dark-grey);}:root .has-dark-grey-background-color{background-color:var(--dark-grey);}:root .has-grey-color{color:var(--grey);}:root .has-grey-background-color{background-color:var(--grey);}:root .has-light-blue-color{color:var(--light-blue);}:root .has-light-blue-background-color{background-color:var(--light-blue);}:root .has-gold-color{color:var(--gold);}:root .has-gold-background-color{background-color:var(--gold);}:root .has-white-color{color:var(--white);}:root .has-white-background-color{background-color:var(--white);}h1{font-family:var(--gp-font--inter);font-weight:normal;text-transform:capitalize;font-size:var(--h1);line-height:normal;margin-bottom:0.75em;}body, button, input, select, textarea{font-family:var(--gp-font--inter);font-weight:normal;font-size:1rem;}body{line-height:1.625;}h2{font-family:var(--gp-font--inter);font-weight:normal;text-transform:capitalize;font-size:var(--h2);line-height:normal;margin-bottom:0.5em;}.main-navigation a, .main-navigation .menu-toggle, .main-navigation .menu-bar-items{font-weight:500;}h3{font-family:var(--gp-font--inter);font-weight:normal;font-size:var(--h3);letter-spacing:0.5px;margin-bottom:0.75em;}h4{font-family:var(--gp-font--inter);font-size:var(--h4);}h2.entry-title{font-size:1.3125rem;line-height:1.875;}.top-bar{background-color:#636363;color:#ffffff;}.top-bar a{color:#ffffff;}.top-bar a:hover{color:#303030;}.site-header{background-color:var(--base-3);}.main-title a,.main-title a:hover{color:var(--contrast);}.site-description{color:var(--contrast-2);}.main-navigation .main-nav ul li a, .main-navigation .menu-toggle, .main-navigation .menu-bar-items{color:var(--primary-menu-item-text-color);}.main-navigation .main-nav ul li:not([class*="current-menu-"]):hover > a, .main-navigation .main-nav ul li:not([class*="current-menu-"]):focus > a, .main-navigation .main-nav ul li.sfHover:not([class*="current-menu-"]) > a, .main-navigation .menu-bar-item:hover > a, .main-navigation .menu-bar-item.sfHover > a{color:var(--primary-menu-item-text-color);}button.menu-toggle:hover,button.menu-toggle:focus{color:var(--primary-menu-item-text-color);}.main-navigation .main-nav ul li[class*="current-menu-"] > a{color:var(--primary-menu-item-text-color);}.navigation-search input[type="search"],.navigation-search input[type="search"]:active, .navigation-search input[type="search"]:focus, .main-navigation .main-nav ul li.search-item.active > a, .main-navigation .menu-bar-items .search-item.active > a{color:var(--primary-menu-item-text-color);}.main-navigation ul ul{background-color:var(--white);}.main-navigation .main-nav ul ul li a{color:var(--primary);}.main-navigation .main-nav ul ul li:not([class*="current-menu-"]):hover > a,.main-navigation .main-nav ul ul li:not([class*="current-menu-"]):focus > a, .main-navigation .main-nav ul ul li.sfHover:not([class*="current-menu-"]) > a{color:var(--black);}.separate-containers .inside-article, .separate-containers .comments-area, .separate-containers .page-header, .one-container .container, .separate-containers .paging-navigation, .inside-page-header{color:var(--grey);background-color:var(--white);}.entry-title a{color:var(--secondary);}.entry-title a:hover{color:var(--primary);}.entry-meta{color:var(--grey);}h1{color:var(--secondary);}h2{color:var(--secondary);}h3{color:var(--secondary);}h4{color:var(--secondary);}.sidebar .widget{background-color:var(--base-3);}.footer-widgets{background-color:var(--base-3);}.site-info{background-color:var(--base-3);}input[type="text"],input[type="email"],input[type="url"],input[type="password"],input[type="search"],input[type="tel"],input[type="number"],textarea,select{border-color:#979797;}input[type="text"]:focus,input[type="email"]:focus,input[type="url"]:focus,input[type="password"]:focus,input[type="search"]:focus,input[type="tel"]:focus,input[type="number"]:focus,textarea:focus,select:focus{border-color:var(--blue);}button,html input[type="button"],input[type="reset"],input[type="submit"],a.button,a.wp-block-button__link:not(.has-background){color:#ffffff;background-color:#55555e;}button:hover,html input[type="button"]:hover,input[type="reset"]:hover,input[type="submit"]:hover,a.button:hover,button:focus,html input[type="button"]:focus,input[type="reset"]:focus,input[type="submit"]:focus,a.button:focus,a.wp-block-button__link:not(.has-background):active,a.wp-block-button__link:not(.has-background):focus,a.wp-block-button__link:not(.has-background):hover{color:#ffffff;background-color:#3f4047;}a.generate-back-to-top{background-color:rgba( 0,0,0,0.4 );color:#ffffff;}a.generate-back-to-top:hover,a.generate-back-to-top:focus{background-color:rgba( 0,0,0,0.6 );color:#ffffff;}:root{--gp-search-modal-bg-color:var(--base-3);--gp-search-modal-text-color:var(--contrast);--gp-search-modal-overlay-bg-color:rgba(0,0,0,0.2);}@media (max-width: 1199px){.main-navigation .menu-bar-item:hover > a, .main-navigation .menu-bar-item.sfHover > a{background:none;color:var(--primary-menu-item-text-color);}}.nav-below-header .main-navigation .inside-navigation.grid-container, .nav-above-header .main-navigation .inside-navigation.grid-container{padding:0px 20px 0px 20px;}.separate-containers .inside-article, .separate-containers .comments-area, .separate-containers .page-header, .separate-containers .paging-navigation, .one-container .site-content, .inside-page-header{padding:56px 0px 138px 0px;}.site-main .wp-block-group__inner-container{padding:56px 0px 138px 0px;}.separate-containers .paging-navigation{padding-top:20px;padding-bottom:20px;}.entry-content .alignwide, body:not(.no-sidebar) .entry-content .alignfull{margin-left:-0px;width:calc(100% + 0px);max-width:calc(100% + 0px);}.one-container.right-sidebar .site-main,.one-container.both-right .site-main{margin-right:0px;}.one-container.left-sidebar .site-main,.one-container.both-left .site-main{margin-left:0px;}.one-container.both-sidebars .site-main{margin:0px;}.one-container.archive .post:not(:last-child):not(.is-loop-template-item), .one-container.blog .post:not(:last-child):not(.is-loop-template-item){padding-bottom:138px;}.rtl .menu-item-has-children .dropdown-menu-toggle{padding-left:20px;}.rtl .main-navigation .main-nav ul li.menu-item-has-children > a{padding-right:20px;}@media (max-width:768px){.separate-containers .inside-article, .separate-containers .comments-area, .separate-containers .page-header, .separate-containers .paging-navigation, .one-container .site-content, .inside-page-header{padding:56px 30px 90px 30px;}.site-main .wp-block-group__inner-container{padding:56px 30px 90px 30px;}.inside-top-bar{padding-right:30px;padding-left:30px;}.inside-header{padding-top:20px;padding-right:30px;padding-bottom:20px;padding-left:30px;}.widget-area .widget{padding-top:30px;padding-right:30px;padding-bottom:30px;padding-left:30px;}.footer-widgets-container{padding-top:30px;padding-right:30px;padding-bottom:30px;padding-left:30px;}.inside-site-info{padding-right:30px;padding-left:30px;}.entry-content .alignwide, body:not(.no-sidebar) .entry-content .alignfull{margin-left:-30px;width:calc(100% + 60px);max-width:calc(100% + 60px);}.one-container .site-main .paging-navigation{margin-bottom:20px;}}/* End cached CSS */.is-right-sidebar{width:30%;}.is-left-sidebar{width:30%;}.site-content .content-area{width:100%;}@media (max-width: 1199px){.main-navigation .menu-toggle,.sidebar-nav-mobile:not(#sticky-placeholder){display:block;}.main-navigation ul,.gen-sidebar-nav,.main-navigation:not(.slideout-navigation):not(.toggled) .main-nav > ul,.has-inline-mobile-toggle #site-navigation .inside-navigation > *:not(.navigation-search):not(.main-nav){display:none;}.nav-align-right .inside-navigation,.nav-align-center .inside-navigation{justify-content:space-between;}.has-inline-mobile-toggle .mobile-menu-control-wrapper{display:flex;flex-wrap:wrap;}.has-inline-mobile-toggle .inside-header{flex-direction:row;text-align:left;flex-wrap:wrap;}.has-inline-mobile-toggle .header-widget,.has-inline-mobile-toggle #site-navigation{flex-basis:100%;}.nav-float-left .has-inline-mobile-toggle #site-navigation{order:10;}}
+.dynamic-author-image-rounded{border-radius:100%;}.dynamic-featured-image, .dynamic-author-image{vertical-align:middle;}.one-container.blog .dynamic-content-template:not(:last-child), .one-container.archive .dynamic-content-template:not(:last-child){padding-bottom:0px;}.dynamic-entry-excerpt > p:last-child{margin-bottom:0px;}
+</style>
+<link rel='stylesheet' id='child-theme-css' href='https://www.colombohurdlaw.com/wp-content/themes/sayenko-colombo/build/styles/style-main.css?ver=321adb1481d4a4c2a493.1755881357' media='all' />
+<link rel='stylesheet' id='generateblocks-global-css' href='https://www.colombohurdlaw.com/wp-content/uploads/generateblocks/style-global.css?ver=1747694724.1755881357' media='all' />
+<style id='generateblocks-inline-css'>
+.gb-container.gb-tabs__item:not(.gb-tabs__item-open){display:none;}.gb-accordion__item:not(.gb-accordion__item-open) > .gb-button .gb-accordion__icon-open{display:none;}.gb-accordion__item.gb-accordion__item-open > .gb-button .gb-accordion__icon{display:none;}a.gb-button-3710b7e6{display:inline-flex;align-items:center;column-gap:0.5em;font-size:var(--btn-font-size);text-decoration:none;}a.gb-button-3710b7e6 .gb-icon{line-height:0;}a.gb-button-3710b7e6 .gb-icon svg{width:1em;height:1em;fill:currentColor;}a.gb-button-5f3e7b3a{display:inline-flex;align-items:center;column-gap:0.5em;font-size:var(--btn-font-size);text-decoration:none;}a.gb-button-5f3e7b3a .gb-icon{line-height:0;}a.gb-button-5f3e7b3a .gb-icon svg{width:1em;height:1em;fill:currentColor;}a.gb-button-a6fda582{display:inline-flex;align-items:center;column-gap:0.5em;font-size:var(--btn-font-size);text-decoration:none;}a.gb-button-a6fda582 .gb-icon{line-height:0;}a.gb-button-a6fda582 .gb-icon svg{width:1em;height:1em;fill:currentColor;}a.gb-button-e6cdbe6f{display:inline-flex;align-items:center;column-gap:0.5em;font-size:var(--btn-font-size);text-decoration:none;}a.gb-button-e6cdbe6f .gb-icon{line-height:0;}a.gb-button-e6cdbe6f .gb-icon svg{width:1em;height:1em;fill:currentColor;}a.gb-button-60ee8255{display:inline-flex;align-items:center;column-gap:0.5em;font-size:var(--btn-font-size);text-decoration:none;}a.gb-button-60ee8255 .gb-icon{line-height:0;}a.gb-button-60ee8255 .gb-icon svg{width:1em;height:1em;fill:currentColor;}:root{--gb-container-width:1200px;}.gb-container .wp-block-image img{vertical-align:middle;}.gb-grid-wrapper .wp-block-image{margin-bottom:0;}.gb-highlight{background:none;}.gb-shape{line-height:0;}.gb-container-link{position:absolute;top:0;right:0;bottom:0;left:0;z-index:99;}@media (max-width:767px){.gb-element-abef192e{grid-template-columns:1fr}}@media (max-width:767px){.gb-element-fd17f5cb{grid-template-columns:1fr}}.gb-text-8d2fac39{align-items:center;background-color:var(--btn-background);color:var(--btn-text-color);display:inline-flex;font-size:var(--btn-font-size);font-weight:var(--btn-font-weight);justify-content:center;letter-spacing:var(--btn-letter-spacing);line-height:var(--btn-line-height);min-width:var(--btn-min-width);text-align:var(--btn-text-align);text-decoration:none;text-transform:var(--btn-text-transform);border-radius:var(--btn-border-radius);padding:var(--btn-padding-block) var(--btn-padding-inline)}.gb-text-8d2fac39:is(:hover,:focus){background-color:var(--btn-background-hover);color:var(--btn-text-color-hover)}@media (min-width:1025px){.gb-text-8d2fac39{display:none !important}}@media (max-width:1024px){.gb-text-8d2fac39{display:none !important}}@media (max-width:1024px) and (min-width:768px){.gb-text-8d2fac39{display:none !important}}@media (max-width:767px){.gb-text-8d2fac39{display:none !important}}.gb-text-945dc5c8{align-items:center;background-color:#82d742;bottom:30px;color:var(--btn-text-color);column-gap:0.5em;display:inline-flex;font-size:var(--btn-font-size);font-weight:var(--btn-font-weight);justify-content:center;letter-spacing:var(--btn-letter-spacing);line-height:var(--btn-line-height);min-width:var(--btn-min-width);position:fixed;right:30px;text-align:var(--btn-text-align);text-decoration:none;z-index:999;border-radius:var(--btn-border-radius);padding:var(--btn-padding-block) var(--btn-padding-inline)}.gb-text-945dc5c8:is(:hover,:focus){background-color:#82d742;color:var(--btn-text-color-hover)}.gb-text-945dc5c8 .gb-shape svg{width:2em;height:2em;fill:currentColor}.gb-media-d258a7ea{color:var(--secondary);height:auto;margin-bottom:0.5rem;max-width:100%;object-fit:cover;width:auto}
+</style>
+<link rel='stylesheet' id='generate-secondary-nav-css' href='https://www.colombohurdlaw.com/wp-content/plugins/gp-premium/secondary-nav/functions/css/main.min.css?ver=2.5.3.1755881357' media='all' />
+<style id='generate-secondary-nav-inline-css'>
+.secondary-nav-below-header .secondary-navigation .inside-navigation.grid-container, .secondary-nav-above-header .secondary-navigation .inside-navigation.grid-container{padding:0px 20px 0px 20px;}.secondary-navigation .main-nav ul li a,.secondary-navigation .menu-toggle,.secondary-menu-bar-items .menu-bar-item > a{color:var(--primary-menu-item-text-color);line-height:20px;}.secondary-navigation .secondary-menu-bar-items{color:var(--primary-menu-item-text-color);}button.secondary-menu-toggle:hover,button.secondary-menu-toggle:focus{color:var(--primary-menu-item-text-color);}.widget-area .secondary-navigation{margin-bottom:20px;}.secondary-navigation ul ul{background-color:#303030;top:auto;}.secondary-navigation .main-nav ul ul li a{color:#ffffff;}.secondary-navigation .main-nav ul li:not([class*="current-menu-"]):hover > a, .secondary-navigation .main-nav ul li:not([class*="current-menu-"]):focus > a, .secondary-navigation .main-nav ul li.sfHover:not([class*="current-menu-"]) > a, .secondary-menu-bar-items .menu-bar-item:hover > a{color:var(--primary-menu-item-text-color);}.secondary-navigation .main-nav ul ul li:not([class*="current-menu-"]):hover > a,.secondary-navigation .main-nav ul ul li:not([class*="current-menu-"]):focus > a,.secondary-navigation .main-nav ul ul li.sfHover:not([class*="current-menu-"]) > a{color:#ffffff;background-color:#474747;}.secondary-navigation .main-nav ul ul li[class*="current-menu-"] > a{color:#ffffff;background-color:#474747;}.secondary-navigation.toggled .dropdown-menu-toggle:before{display:none;}@media (max-width: 1199px) {.secondary-menu-bar-items .menu-bar-item:hover > a{background: none;color: var(--primary-menu-item-text-color);}}
+</style>
+<link rel='stylesheet' id='generate-secondary-nav-mobile-css' href='https://www.colombohurdlaw.com/wp-content/plugins/gp-premium/secondary-nav/functions/css/main-mobile.min.css?ver=2.5.3.1755881357' media='all' />
+<link rel='stylesheet' id='generate-navigation-branding-css' href='https://www.colombohurdlaw.com/wp-content/plugins/gp-premium/menu-plus/functions/css/navigation-branding-flex.min.css?ver=2.5.3.1755881357' media='all' />
+<style id='generate-navigation-branding-inline-css'>
+@media (max-width: 1199px){.site-header, #site-navigation, #sticky-navigation{display:none !important;opacity:0.0;}#mobile-header{display:block !important;width:100% !important;}#mobile-header .main-nav > ul{display:none;}#mobile-header.toggled .main-nav > ul, #mobile-header .menu-toggle, #mobile-header .mobile-bar-items{display:block;}#mobile-header .main-nav{-ms-flex:0 0 100%;flex:0 0 100%;-webkit-box-ordinal-group:5;-ms-flex-order:4;order:4;}}.main-navigation.has-branding .inside-navigation.grid-container, .main-navigation.has-branding.grid-container .inside-navigation:not(.grid-container){padding:0px;}.main-navigation.has-branding:not(.grid-container) .inside-navigation:not(.grid-container) .navigation-branding{margin-left:10px;}.navigation-branding img, .site-logo.mobile-header-logo img{height:60px;width:auto;}.navigation-branding .main-title{line-height:60px;}@media (max-width: 1199px){.main-navigation.has-branding.nav-align-center .menu-bar-items, .main-navigation.has-sticky-branding.navigation-stick.nav-align-center .menu-bar-items{margin-left:auto;}.navigation-branding{margin-right:auto;margin-left:10px;}.navigation-branding .main-title, .mobile-header-navigation .site-logo{margin-left:10px;}.main-navigation.has-branding .inside-navigation.grid-container{padding:0px;}}
+</style>
+<link rel='stylesheet' id='wp-block-paragraph-css' href='https://www.colombohurdlaw.com/wp-includes/blocks/paragraph/style.min.css?ver=6.8.2.1755881357' media='all' />
+<link rel='stylesheet' id='wp-block-heading-css' href='https://www.colombohurdlaw.com/wp-includes/blocks/heading/style.min.css?ver=6.8.2.1755881357' media='all' />
+<script id="wpml-cookie-js-extra">
+var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":"\/"}};
+var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":"\/"}};
+</script>
+<script src="https://www.colombohurdlaw.com/wp-content/plugins/sitepress-multilingual-cms/res/js/cookies/language-cookie.js?ver=476000.1755881357" id="wpml-cookie-js" defer data-wp-strategy="defer"></script>
+<script src="https://www.colombohurdlaw.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1.1755881357" id="jquery-core-js"></script>
+<script src="https://www.colombohurdlaw.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1.1755881357" id="jquery-migrate-js"></script>
+<script src="https://www.colombohurdlaw.com/wp-content/themes/sayenko-colombo/build/scripts/animations.js?ver=6ad319530f412214cd54.1755881357" id="theme-animations-js" defer data-wp-strategy="defer" type="pmdelayedscript" data-cfasync="false" data-no-optimize="1" data-no-defer="1" data-no-minify="1"></script>
+<link rel="https://api.w.org/" href="https://www.colombohurdlaw.com/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://www.colombohurdlaw.com/wp-json/wp/v2/pages/3" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.colombohurdlaw.com/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.8.2" />
+<link rel='shortlink' href='https://www.colombohurdlaw.com/?p=3' />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.colombohurdlaw.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.colombohurdlaw.com%2Fprivacy-policy%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.colombohurdlaw.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.colombohurdlaw.com%2Fprivacy-policy%2F&#038;format=xml" />
+<meta name="generator" content="WPML ver:4.7.6 stt:1,42,2;" />
+<!-- Google Tag Manager -->
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-P9QX8RJ');
+</script>
+<!-- End Google Tag Manager -->
+<meta name =" google-site-verification " content =" XqnSv0UnEUxfkWCOhRtsMxYvf2qRkCFKFTNhmRoAPtk " />
+<script type="pmdelayedscript" data-cfasync="false" data-no-optimize="1" data-no-defer="1" data-no-minify="1"> (function(){ var s = document.createElement('script'); var h = document.querySelector('head') || document.body; s.src = 'https://acsbapp.com/apps/app/dist/js/app.js'; s.async = true; s.onload = function(){ acsbJS.init(); }; h.appendChild(s); })(); </script>    <script>
+        document.documentElement.classList.replace('no-js', 'js');
+    </script>
+<link rel="pingback" href="https://www.colombohurdlaw.com/xmlrpc.php">
+<link rel="icon" href="https://www.colombohurdlaw.com/wp-content/uploads/2025/06/cropped-colombo-favicon-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://www.colombohurdlaw.com/wp-content/uploads/2025/06/cropped-colombo-favicon-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://www.colombohurdlaw.com/wp-content/uploads/2025/06/cropped-colombo-favicon-180x180.png" />
+<meta name="msapplication-TileImage" content="https://www.colombohurdlaw.com/wp-content/uploads/2025/06/cropped-colombo-favicon-270x270.png" />
+		<style id="wp-custom-css">
+			/*.entry-content ul, .entry-content ol {
+	margin-left: 0;
+    padding-left: 18px;
+}
+
+.entry-content ul ul, 
+.entry-content ol ol,
+.entry-content ul ol, 
+.entry-content ol ul {
+	padding-top: 18px;
+}*/
+
+#service_category-select {
+	display: none;
+}		</style>
+		</head>
+
+<body class="privacy-policy wp-singular page-template-default page page-id-3 wp-custom-logo wp-embed-responsive wp-theme-generatepress wp-child-theme-sayenko-colombo post-image-aligned-center secondary-nav-float-right secondary-nav-aligned-right sticky-menu-fade mobile-header mobile-header-logo frontend no-sidebar nav-float-right one-container header-aligned-left dropdown-hover" itemtype="https://schema.org/WebPage" itemscope>
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P9QX8RJ" height="0" width="0" style="display:none;visibility:hidden" aria-hidden="true"></iframe></noscript><a class="screen-reader-text skip-link" href="#content" title="Skip to content">Skip to content</a>		<header class="site-header has-inline-mobile-toggle" id="masthead" aria-label="Site"  itemtype="https://schema.org/WPHeader" itemscope>
+			<div class="inside-header grid-container">
+				<div class="site-logo"><a href="https://www.colombohurdlaw.com/" rel="home"><?xml version="1.0" encoding="UTF-8"?> <svg class="header-image is-logo-image" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" height="40" viewBox="0 0 218 40" width="218"><title>Colombo &amp; Hurd, PL</title><clipPath id="a"><path d="m0 0h218v40h-218z"></path></clipPath><g clip-path="url(#a)" fill="currentColor"><path d="m67.0676 17.0087h-4.155c-.0756-.541-.2316-1.0254-.4657-1.4484-.2341-.4229-.534-.7868-.9022-1.0868-.3658-.3-.7901-.5287-1.2655-.6885-.478-.1599-.9949-.2386-1.5508-.2386-1.0047 0-1.8825.2509-2.6286.75-.7461.5017-1.324 1.2271-1.7361 2.1811-.4121.9541-.6169 2.1098-.6169 3.4696s.2072 2.5697.6217 3.5213c.4146.9516.9949 1.6672 1.741 2.1516.7462.4844 1.6094.7278 2.5896.7278.5511 0 1.0607-.0737 1.5313-.2213.4706-.1475.89-.3615 1.2582-.6467.3657-.2828.673-.6295.9168-1.0377s.4121-.8729.5072-1.3967l4.155.0197c-.1073.9-.3755 1.7655-.8022 2.5967-.4268.8336-.9998 1.5762-1.7167 2.2303-.7168.654-1.5727 1.1704-2.5627 1.5491s-2.1092.5705-3.3552.5705c-1.7337 0-3.282-.3959-4.6451-1.1877-1.363-.7918-2.4383-1.9352-3.2259-3.4352-.7876-1.4999-1.1802-3.3147-1.1802-5.4441 0-2.1295.3974-3.954 1.1948-5.454.7973-1.5 1.8775-2.6434 3.2455-3.4303 1.3654-.7868 2.9041-1.18273 4.6109-1.18273 1.1265 0 2.1702.15983 3.1358.47953.9656.3196 1.819.7819 2.5676 1.3917.7461.6099 1.3557 1.3549 1.8263 2.2352.4706.8804.773 1.8885.9071 3.0246z"></path><path d="m75.4579 30.0289c-1.4728 0-2.7481-.3172-3.8185-.9516-1.0729-.6344-1.8995-1.5221-2.4823-2.6606s-.8729-2.4614-.8729-3.9663.2901-2.8475.8729-3.986 1.4094-2.0262 2.4823-2.6606 2.3457-.9516 3.8185-.9516c1.4727 0 2.748.3172 3.8184.9516 1.0729.6344 1.8995 1.5221 2.4823 2.6606s.8729 2.4663.8729 3.986c0 1.5196-.2901 2.8278-.8729 3.9663s-1.4094 2.0262-2.4823 2.6606c-1.0728.6344-2.3457.9516-3.8184.9516zm.0195-3.1573c.6705 0 1.2313-.1918 1.68-.5779.4487-.386.79-.9147 1.0192-1.5835.2317-.6689.3463-1.4312.3463-2.2869s-.1146-1.618-.3463-2.2868c-.2316-.6689-.5705-1.2-1.0192-1.5885s-1.0095-.5828-1.68-.5828c-.6706 0-1.2436.1943-1.702.5828s-.8022.9196-1.0339 1.5885c-.2316.6688-.3462 1.4311-.3462 2.2868s.1146 1.618.3462 2.2869c.2317.6688.5755 1.1975 1.0339 1.5835.4584.3861 1.0265.5779 1.702.5779z"></path><path d="m88.242 10.1481v19.5955h-4.0428v-19.5955z"></path><path d="m96.9837 30.0289c-1.4727 0-2.748-.3172-3.8184-.9516-1.0729-.6344-1.8995-1.5221-2.4823-2.6606s-.8729-2.4614-.8729-3.9663.2901-2.8475.8729-3.986 1.4094-2.0262 2.4823-2.6606c1.0728-.6344 2.3457-.9516 3.8184-.9516 1.4728 0 2.7481.3172 3.8183.9516 1.073.6344 1.9 1.5221 2.482 2.6606.583 1.1385.873 2.4663.873 3.986 0 1.5196-.29 2.8278-.873 3.9663-.582 1.1385-1.409 2.0262-2.482 2.6606-1.0727.6344-2.3455.9516-3.8183.9516zm.0171-3.1573c.6706 0 1.2314-.1918 1.68-.5779.4487-.386.7901-.9147 1.0193-1.5835.2316-.6689.3459-1.4312.3459-2.2869s-.1143-1.618-.3459-2.2868c-.2317-.6689-.5706-1.2-1.0193-1.5885-.4486-.3885-1.0094-.5828-1.68-.5828-.6705 0-1.2436.1943-1.702.5828s-.8022.9196-1.0338 1.5885c-.2317.6688-.3463 1.4311-.3463 2.2868s.1146 1.618.3463 2.2869c.2316.6688.5754 1.1975 1.0338 1.5835.4584.3861 1.0266.5779 1.702.5779z"></path><path d="m105.725 29.7437v-14.6973h3.853v2.5942h.17c.305-.8606.81-1.5393 1.52-2.0385.707-.4967 1.555-.7475 2.543-.7475.987 0 1.85.2508 2.553.75.702.5016 1.17 1.1778 1.404 2.0336h.151c.298-.841.837-1.5172 1.617-2.0238.78-.5065 1.707-.7598 2.775-.7598 1.36 0 2.465.4353 3.316 1.3057.851.8705 1.275 2.1024 1.275 3.6983v9.8851h-4.033v-9.081c0-.8164-.214-1.4287-.646-1.8369-.429-.4081-.968-.6122-1.612-.6122-.734 0-1.307.2336-1.716.7032-.412.4697-.617 1.0869-.617 1.8516v8.9753h-3.919v-9.1671c0-.7204-.204-1.2958-.612-1.7212-.407-.4279-.943-.6418-1.609-.6418-.449 0-.853.1131-1.209.3393-.359.2262-.642.5434-.849.9467-.21.4057-.312.8779-.312 1.4213v8.8228z"></path><path d="m129.097 29.7436v-19.5955h4.043v7.3671h.124c.178-.3959.434-.7992.773-1.2098s.781-.7549 1.329-1.0328c.546-.2778 1.229-.4155 2.046-.4155 1.063 0 2.043.2803 2.941.8385.897.5582 1.616 1.3967 2.153 2.5155.536 1.1188.807 2.5204.807 4.2048s-.261 3.0221-.783 4.1483-1.231 1.977-2.126 2.5549c-.895.5778-1.897.8655-3.004.8655-.785 0-1.451-.1303-1.997-.3909-.546-.2607-.995-.5927-1.344-.991-.348-.3984-.614-.8016-.797-1.2098h-.181v2.3532h-3.984zm3.958-7.3498c0 .8729.119 1.6352.361 2.2868.241.6517.587 1.1558 1.043 1.5172.456.3615 1.01.541 1.661.541s1.214-.1844 1.67-.5508.802-.8779 1.039-1.532c.236-.654.356-1.4089.356-2.2622s-.117-1.5934-.351-2.2401c-.235-.6443-.578-1.1484-1.034-1.5123s-1.015-.5459-1.68-.5459c-.666 0-1.212.1746-1.666.5262-.451.3517-.8.8484-1.038 1.4926-.242.6443-.361 1.4041-.361 2.277z"></path><path d="m151.511 30.0289c-1.473 0-2.748-.3172-3.819-.9516-1.073-.6344-1.899-1.5221-2.482-2.6606s-.873-2.4614-.873-3.9663.29-2.8475.873-3.986 1.409-2.0262 2.482-2.6606 2.346-.9516 3.819-.9516c1.472 0 2.748.3172 3.818.9516 1.073.6344 1.9 1.5221 2.482 2.6606.583 1.1385.873 2.4663.873 3.986 0 1.5196-.29 2.8278-.873 3.9663-.582 1.1385-1.409 2.0262-2.482 2.6606s-2.346.9516-3.818.9516zm.019-3.1573c.671 0 1.231-.1918 1.68-.5779.449-.386.79-.9147 1.019-1.5835.232-.6689.347-1.4312.347-2.2869s-.115-1.618-.347-2.2868c-.231-.6689-.57-1.2-1.019-1.5885s-1.009-.5828-1.68-.5828c-.67 0-1.243.1943-1.702.5828-.458.3885-.802.9196-1.034 1.5885-.231.6688-.346 1.4311-.346 2.2868s.115 1.618.346 2.2869c.232.6688.576 1.1975 1.034 1.5835.459.3861 1.027.5779 1.702.5779z"></path><path d="m160.328 29.7436v-19.5955h4.108v8.0851h8.34v-8.0851h4.098v19.5955h-4.098v-8.0949h-8.34v8.0949z"></path><path d="m188.464 23.4856v-8.4392h4.043v14.6973h-3.88v-2.6705h-.151c-.329.8607-.875 1.5541-1.636 2.0754-.763.5237-1.69.7844-2.785.7844-.973 0-1.831-.2238-2.572-.6688-.739-.4476-1.317-1.082-1.731-1.9033-.415-.8237-.625-1.8073-.632-2.9557v-9.3588h4.043v8.631c.007.868.236 1.5541.692 2.0581.456.5041 1.066.7549 1.832.7549.487 0 .943-.1131 1.365-.3393.424-.2262.768-.5631 1.029-1.0106.263-.4476.39-.9984.385-1.6549z"></path><path d="m194.662 29.7437v-14.6973h3.919v2.5647h.151c.266-.9123.712-1.6032 1.339-2.0704.626-.4697 1.348-.7033 2.162-.7033.203 0 .42.0123.654.0393.234.0246.439.0615.617.1058v3.6171c-.19-.0565-.454-.1082-.788-.1524-.336-.0443-.641-.0664-.919-.0664-.595 0-1.124.1278-1.59.3885-.466.2606-.831.6172-1.1 1.077-.268.4598-.402.9885-.402 1.5885v8.3138h-4.043z"></path><path d="m209.709 29.9822c-1.107 0-2.109-.2877-3.004-.8656-.895-.5778-1.604-1.4286-2.126-2.5549-.522-1.1262-.783-2.5081-.783-4.1482 0-1.6402.269-3.086.807-4.2049.537-1.1188 1.254-1.9573 2.149-2.5155s1.877-.8385 2.945-.8385c.817 0 1.497.1377 2.046.4156.546.2778.99.6221 1.329 1.0327.339.4107.595.814.773 1.2099h.124v-7.3671h4.033v19.5955h-3.984v-2.3532h-.171c-.19.4081-.456.8114-.802 1.2098-.344.3983-.79.7278-1.339.9909-.546.2607-1.211.391-1.997.391zm1.281-3.2434c.651 0 1.204-.1795 1.655-.541.451-.3614.8-.8655 1.044-1.5172.244-.6516.366-1.4139.366-2.2868s-.12-1.6328-.361-2.277c-.242-.6443-.588-1.141-1.044-1.4926s-1.009-.5262-1.66-.5262-1.224.182-1.68.5459-.8.868-1.034 1.5122c-.234.6443-.351 1.3918-.351 2.2402 0 .8483.119 1.6081.356 2.2622.236.6541.582 1.1631 1.033 1.5319.452.3664 1.01.5509 1.676.5509z"></path><path d="m37.4584 10.8244-3.0309 1.5565c.9388 1.8245 1.5508 3.8483 1.758 5.99h-9.5315v-5.9605h-3.4089v15.1989h3.4089v-5.9581h9.5315c-.2194 2.2426-.8826 4.3548-1.9019 6.2458l3.0041 1.6106c1.5167-2.8278 2.3798-6.0663 2.3798-9.5064s-.7973-6.4277-2.2067-9.1768z"></path><path d="m19.8313 36.5697c-9.0757 0-16.43221-7.4187-16.43221-16.5709 0-9.1523 7.35901-16.56854 16.43221-16.56854 4.5402 0 8.6513 1.85652 11.6237 4.85891l2.4042-2.42454c-3.5868-3.62451-8.5465-5.86463-14.0279-5.86463-10.95319 0-19.8313 8.9531-19.8313 19.9988 0 11.0456 8.87811 19.9987 19.8313 19.9987 5.4741 0 10.4289-2.2352 14.0182-5.8523l-2.4043-2.4245c-2.9724 2.995-7.0786 4.8466-11.6139 4.8466z"></path></g></svg> </a></div>	<nav class="main-navigation mobile-menu-control-wrapper" id="mobile-menu-control-wrapper" aria-label="Mobile Toggle">
+				<button data-nav="site-navigation" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+			<span class="gp-icon icon-menu-bars"><svg xmlns="http://www.w3.org/2000/svg" width="31" height="26" viewBox="0 0 31 26" fill="none">
+  <path d="M2 12H25" stroke="#193862" stroke-width="3" stroke-linecap="square"/>
+  <path d="M2 22.5H29" stroke="#193862" stroke-width="3" stroke-linecap="square"/>
+  <path d="M2 2H29" stroke="#193862" stroke-width="3" stroke-linecap="square"/>
+</svg><svg fill="none" height="25" viewBox="0 0 25 25" width="25" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="m14.4416 12.2948 9.6454-9.6454c.6125-.61253.6125-1.53228 0-2.145769-.6135-.609659-1.5294-.609659-2.1429 0l-9.6493 9.649269-9.6454-9.649269c-.61253-.609659-1.53228-.609659-2.145769 0-.609659.613489-.609659 1.533239 0 2.145769l9.649269 9.6454-9.649269 9.6493c-.609659.6135-.609659 1.5294 0 2.1429.613489.6125 1.533239.6125 2.145769 0l9.6454-9.6454 9.6493 9.6454c.6135.6125 1.5294.6125 2.1429 0 .6125-.6135.6125-1.5294 0-2.1429z" fill="#193862" fill-rule="evenodd"/></svg>
+        </span><span class="screen-reader-text">Menu</span>		</button>
+	</nav>
+	<div class="multi-navigation-wrapper">		<nav class="main-navigation sub-menu-right" id="site-navigation" aria-label="Primary"  itemtype="https://schema.org/SiteNavigationElement" itemscope>
+			<div class="inside-navigation grid-container">
+								<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+					<span class="gp-icon icon-menu-bars"><svg xmlns="http://www.w3.org/2000/svg" width="31" height="26" viewBox="0 0 31 26" fill="none">
+  <path d="M2 12H25" stroke="#193862" stroke-width="3" stroke-linecap="square"/>
+  <path d="M2 22.5H29" stroke="#193862" stroke-width="3" stroke-linecap="square"/>
+  <path d="M2 2H29" stroke="#193862" stroke-width="3" stroke-linecap="square"/>
+</svg><svg fill="none" height="25" viewBox="0 0 25 25" width="25" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="m14.4416 12.2948 9.6454-9.6454c.6125-.61253.6125-1.53228 0-2.145769-.6135-.609659-1.5294-.609659-2.1429 0l-9.6493 9.649269-9.6454-9.649269c-.61253-.609659-1.53228-.609659-2.145769 0-.609659.613489-.609659 1.533239 0 2.145769l9.649269 9.6454-9.649269 9.6493c-.609659.6135-.609659 1.5294 0 2.1429.613489.6125 1.533239.6125 2.145769 0l9.6454-9.6454 9.6493 9.6454c.6135.6125 1.5294.6125 2.1429 0 .6125-.6135.6125-1.5294 0-2.1429z" fill="#193862" fill-rule="evenodd"/></svg>
+        </span><span class="screen-reader-text">Menu</span>				</button>
+				<div id="primary-menu" class="main-nav"><ul id="menu-primary" class=" menu sf-menu"><li id="menu-item-2802" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2802"><a href="https://www.colombohurdlaw.com/attorneys/">Our People</a></li>
+<li id="menu-item-2961" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children mega-menu menu-item-2961"><a href="#">Immigration Services<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow"><svg viewBox="0 0 330 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"><path d="M305.913 197.085c0 2.266-1.133 4.815-2.833 6.514L171.087 335.593c-1.7 1.7-4.249 2.832-6.515 2.832s-4.815-1.133-6.515-2.832L26.064 203.599c-1.7-1.7-2.832-4.248-2.832-6.514s1.132-4.816 2.832-6.515l14.162-14.163c1.7-1.699 3.966-2.832 6.515-2.832 2.266 0 4.815 1.133 6.515 2.832l111.316 111.317 111.316-111.317c1.7-1.699 4.249-2.832 6.515-2.832s4.815 1.133 6.515 2.832l14.162 14.163c1.7 1.7 2.833 4.249 2.833 6.515z" /></svg></span></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-2952" class="menu-item menu-item-type-post_type menu-item-object-practice menu-item-has-children mega-menu-group menu-item-2952"><a href="https://www.colombohurdlaw.com/practice/business-immigration/">Business Immigration Lawyers<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow-right"><svg viewBox="0 0 192 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M178.425 256.001c0 2.266-1.133 4.815-2.832 6.515L43.599 394.509c-1.7 1.7-4.248 2.833-6.514 2.833s-4.816-1.133-6.515-2.833l-14.163-14.162c-1.699-1.7-2.832-3.966-2.832-6.515 0-2.266 1.133-4.815 2.832-6.515l111.317-111.316L16.407 144.685c-1.699-1.7-2.832-4.249-2.832-6.515s1.133-4.815 2.832-6.515l14.163-14.162c1.7-1.7 4.249-2.833 6.515-2.833s4.815 1.133 6.514 2.833l131.994 131.993c1.7 1.7 2.832 4.249 2.832 6.515z" fill-rule="nonzero" /></svg></span></span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-2828" class="menu-item menu-item-type-post_type menu-item-object-service mega-menu-column has-description menu-item-2828"><div class="menu-item-description">Permanent Residence through Employment</div><a href="https://www.colombohurdlaw.com/visas/eb-1-visa/">EB-1A Visa</a></li>
+		<li id="menu-item-2829" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-has-children menu-item-2829"><a href="https://www.colombohurdlaw.com/visas/eb-2-national-interest-waiver-niw/">EB-2 NIW Visa<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow-right"><svg viewBox="0 0 192 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M178.425 256.001c0 2.266-1.133 4.815-2.832 6.515L43.599 394.509c-1.7 1.7-4.248 2.833-6.514 2.833s-4.816-1.133-6.515-2.833l-14.163-14.162c-1.699-1.7-2.832-3.966-2.832-6.515 0-2.266 1.133-4.815 2.832-6.515l111.317-111.316L16.407 144.685c-1.699-1.7-2.832-4.249-2.832-6.515s1.133-4.815 2.832-6.515l14.163-14.162c1.7-1.7 4.249-2.833 6.515-2.833s4.815 1.133 6.514 2.833l131.994 131.993c1.7 1.7 2.832 4.249 2.832 6.515z" fill-rule="nonzero" /></svg></span></span></a>
+		<ul class="sub-menu">
+			<li id="menu-item-6366" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-6366"><a href="https://www.colombohurdlaw.com/visas/eb-2-national-interest-waiver-niw/the-advantages-of-self-petitioning-niws/">The Advantages of Self-Petitioning NIWs</a></li>
+		</ul>
+</li>
+		<li id="menu-item-3654" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3654"><a href="https://www.colombohurdlaw.com/visas/eb-3-visa/">EB-3 Visa</a></li>
+		<li id="menu-item-2831" class="menu-item menu-item-type-post_type menu-item-object-service mega-menu-column has-description menu-item-2831"><div class="menu-item-description">Employment Non-immigrant Visas</div><a href="https://www.colombohurdlaw.com/visas/o-1-visa/">O-1 Visas</a></li>
+		<li id="menu-item-3658" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3658"><a href="https://www.colombohurdlaw.com/visas/l-1-visas/">L-1 Visas (L-1A &amp; L-1B)</a></li>
+		<li id="menu-item-3657" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3657"><a href="https://www.colombohurdlaw.com/visas/p-1-visa/">P-1 Visa (Artists, Athletes and Entertainers)</a></li>
+		<li id="menu-item-3656" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3656"><a href="https://www.colombohurdlaw.com/visas/r-visa/">R Visa (Religious Workers)</a></li>
+		<li id="menu-item-3655" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3655"><a href="https://www.colombohurdlaw.com/visas/tn-visa/">TN Visa (NAFTA Professionals)</a></li>
+	</ul>
+</li>
+	<li id="menu-item-2954" class="menu-item menu-item-type-post_type menu-item-object-practice menu-item-has-children mega-menu-group menu-item-2954"><a href="https://www.colombohurdlaw.com/practice/investor-visas/">Investor Visa Lawyers<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow-right"><svg viewBox="0 0 192 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M178.425 256.001c0 2.266-1.133 4.815-2.832 6.515L43.599 394.509c-1.7 1.7-4.248 2.833-6.514 2.833s-4.816-1.133-6.515-2.833l-14.163-14.162c-1.699-1.7-2.832-3.966-2.832-6.515 0-2.266 1.133-4.815 2.832-6.515l111.317-111.316L16.407 144.685c-1.699-1.7-2.832-4.249-2.832-6.515s1.133-4.815 2.832-6.515l14.163-14.162c1.7-1.7 4.249-2.833 6.515-2.833s4.815 1.133 6.514 2.833l131.994 131.993c1.7 1.7 2.832 4.249 2.832 6.515z" fill-rule="nonzero" /></svg></span></span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-2959" class="menu-item menu-item-type-post_type menu-item-object-service mega-menu-column has-description menu-item-2959"><div class="menu-item-description">Permanent Residence through Investment</div><a href="https://www.colombohurdlaw.com/visas/eb5-visa/">EB-5 Visa</a></li>
+		<li id="menu-item-3160" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-has-children mega-menu-column has-description menu-item-3160"><div class="menu-item-description">Investment Non-immigrant Visas</div><a href="https://www.colombohurdlaw.com/visas/e2-visas/">E-2 Visa<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow-right"><svg viewBox="0 0 192 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M178.425 256.001c0 2.266-1.133 4.815-2.832 6.515L43.599 394.509c-1.7 1.7-4.248 2.833-6.514 2.833s-4.816-1.133-6.515-2.833l-14.163-14.162c-1.699-1.7-2.832-3.966-2.832-6.515 0-2.266 1.133-4.815 2.832-6.515l111.317-111.316L16.407 144.685c-1.699-1.7-2.832-4.249-2.832-6.515s1.133-4.815 2.832-6.515l14.163-14.162c1.7-1.7 4.249-2.833 6.515-2.833s4.815 1.133 6.514 2.833l131.994 131.993c1.7 1.7 2.832 4.249 2.832 6.515z" fill-rule="nonzero" /></svg></span></span></a>
+		<ul class="sub-menu">
+			<li id="menu-item-4542" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-4542"><a href="https://www.colombohurdlaw.com/visas/e2-visas/long-take-obtain-e2-visa/">How Long Does it Take to Get an E2 Visa?</a></li>
+			<li id="menu-item-4543" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-4543"><a href="https://www.colombohurdlaw.com/visas/e2-visas/e-2-visa-extension-requirements/">E2 Visa Extension Requirements</a></li>
+			<li id="menu-item-4544" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-4544"><a href="https://www.colombohurdlaw.com/visas/e2-visas/understanding-the-e-2-substantial-capital-requirement/">E2 Substantial Capital Investment Requirements</a></li>
+			<li id="menu-item-4546" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-4546"><a href="https://www.colombohurdlaw.com/visas/e2-visas/advantages-disadvantages-investment-franchise-obtain-e-2-visa/">Investing in a Franchise for Your E-2 Visa</a></li>
+			<li id="menu-item-4547" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-4547"><a href="https://www.colombohurdlaw.com/visas/e2-visas/e2-visa-for-canadian-investors/">E-2 Visa for Canadian Investors</a></li>
+		</ul>
+</li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-2804" class="menu-item menu-item-type-post_type_archive menu-item-object-case_study menu-item-2804"><a href="https://www.colombohurdlaw.com/case-studies/">Case Studies</a></li>
+<li id="menu-item-2801" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2801"><a href="https://www.colombohurdlaw.com/news-articles/">News &#038; Resources</a></li>
+<li id="menu-item-2800" class="menu-item-button menu-item menu-item-type-post_type menu-item-object-modal menu-item-2800"><a href="#" data-bs-toggle="modal" data-bs-target="#modal-2798" role="button">Contact Us</a></li>
+<li id="menu-item-wpml-ls-4-es" class="menu-item wpml-ls-slot-4 wpml-ls-item wpml-ls-item-es wpml-ls-menu-item wpml-ls-first-item menu-item-type-wpml_ls_menu_item menu-item-object-wpml_ls_menu_item menu-item-wpml-ls-4-es"><a href="https://www.colombohurdlaw.com/es/aviso-de-privacidad/" title="Switch to Español"><img
+            class="wpml-ls-flag"
+            src="https://www.colombohurdlaw.com/wp-content/plugins/sitepress-multilingual-cms/res/flags/es.svg"
+            alt=""
+            
+            
+    /><span class="wpml-ls-native" lang="es">Español</span></a></li>
+<li id="menu-item-wpml-ls-4-pt-br" class="menu-item wpml-ls-slot-4 wpml-ls-item wpml-ls-item-pt-br wpml-ls-menu-item wpml-ls-last-item menu-item-type-wpml_ls_menu_item menu-item-object-wpml_ls_menu_item menu-item-wpml-ls-4-pt-br"><a href="https://www.colombohurdlaw.com/pt-br/privacy-policy/" title="Switch to Português"><img
+            class="wpml-ls-flag"
+            src="https://www.colombohurdlaw.com/wp-content/plugins/sitepress-multilingual-cms/res/flags/pt-br.svg"
+            alt=""
+            
+            
+    /><span class="wpml-ls-native" lang="pt-br">Português</span></a></li>
+</ul></div>			</div>
+		</nav>
+					<nav id="secondary-navigation" aria-label="Secondary" class="secondary-navigation" itemtype="https://schema.org/SiteNavigationElement" itemscope>
+				<div class="inside-navigation grid-container grid-parent">
+										<button class="menu-toggle secondary-menu-toggle">
+						<span class="gp-icon icon-menu-bars"><svg xmlns="http://www.w3.org/2000/svg" width="31" height="26" viewBox="0 0 31 26" fill="none">
+  <path d="M2 12H25" stroke="#193862" stroke-width="3" stroke-linecap="square"/>
+  <path d="M2 22.5H29" stroke="#193862" stroke-width="3" stroke-linecap="square"/>
+  <path d="M2 2H29" stroke="#193862" stroke-width="3" stroke-linecap="square"/>
+</svg><svg fill="none" height="25" viewBox="0 0 25 25" width="25" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="m14.4416 12.2948 9.6454-9.6454c.6125-.61253.6125-1.53228 0-2.145769-.6135-.609659-1.5294-.609659-2.1429 0l-9.6493 9.649269-9.6454-9.649269c-.61253-.609659-1.53228-.609659-2.145769 0-.609659.613489-.609659 1.533239 0 2.145769l9.649269 9.6454-9.649269 9.6493c-.609659.6135-.609659 1.5294 0 2.1429.613489.6125 1.533239.6125 2.145769 0l9.6454-9.6454 9.6493 9.6454c.6135.6125 1.5294.6125 2.1429 0 .6125-.6135.6125-1.5294 0-2.1429z" fill="#193862" fill-rule="evenodd"/></svg>
+        </span><span class="mobile-menu">Menu</span>					</button>
+					<div class="main-nav"><ul id="menu-secondary" class=" secondary-menu sf-menu"><li id="menu-item-3109" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3109"><a target="_blank" href="https://paynow.cardx.com/colombohurdxc">Pay Online</a></li>
+<li id="menu-item-wpml-ls-49-es" class="menu-item wpml-ls-slot-49 wpml-ls-item wpml-ls-item-es wpml-ls-menu-item wpml-ls-first-item menu-item-type-wpml_ls_menu_item menu-item-object-wpml_ls_menu_item menu-item-wpml-ls-49-es"><a href="https://www.colombohurdlaw.com/es/aviso-de-privacidad/" title="Switch to Español"><img
+            class="wpml-ls-flag"
+            src="https://www.colombohurdlaw.com/wp-content/plugins/sitepress-multilingual-cms/res/flags/es.svg"
+            alt=""
+            
+            
+    /><span class="wpml-ls-native" lang="es">Español</span></a></li>
+<li id="menu-item-wpml-ls-49-pt-br" class="menu-item wpml-ls-slot-49 wpml-ls-item wpml-ls-item-pt-br wpml-ls-menu-item wpml-ls-last-item menu-item-type-wpml_ls_menu_item menu-item-object-wpml_ls_menu_item menu-item-wpml-ls-49-pt-br"><a href="https://www.colombohurdlaw.com/pt-br/privacy-policy/" title="Switch to Português"><img
+            class="wpml-ls-flag"
+            src="https://www.colombohurdlaw.com/wp-content/plugins/sitepress-multilingual-cms/res/flags/pt-br.svg"
+            alt=""
+            
+            
+    /><span class="wpml-ls-native" lang="pt-br">Português</span></a></li>
+</ul></div>				</div><!-- .inside-navigation -->
+			</nav><!-- #secondary-navigation -->
+			</div>			</div>
+		</header>
+				<nav id="mobile-header" itemtype="https://schema.org/SiteNavigationElement" itemscope class="main-navigation mobile-header-navigation has-branding">
+			<div class="inside-navigation grid-container grid-parent">
+				<div class="site-logo mobile-header-logo">
+						<a href="https://www.colombohurdlaw.com/" title="Colombo &amp; Hurd, PL" rel="home">
+							<img data-perfmatters-preload src="https://www.colombohurdlaw.com/wp-content/uploads/2025/05/logo.svg" alt="Colombo &amp; Hurd, PL" class="is-logo-image" width="218" height="40" />
+						</a>
+					</div>					<button class="menu-toggle" aria-controls="mobile-menu" aria-expanded="false">
+						<span class="gp-icon icon-menu-bars"><svg xmlns="http://www.w3.org/2000/svg" width="31" height="26" viewBox="0 0 31 26" fill="none">
+  <path d="M2 12H25" stroke="#193862" stroke-width="3" stroke-linecap="square"/>
+  <path d="M2 22.5H29" stroke="#193862" stroke-width="3" stroke-linecap="square"/>
+  <path d="M2 2H29" stroke="#193862" stroke-width="3" stroke-linecap="square"/>
+</svg><svg fill="none" height="25" viewBox="0 0 25 25" width="25" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="m14.4416 12.2948 9.6454-9.6454c.6125-.61253.6125-1.53228 0-2.145769-.6135-.609659-1.5294-.609659-2.1429 0l-9.6493 9.649269-9.6454-9.649269c-.61253-.609659-1.53228-.609659-2.145769 0-.609659.613489-.609659 1.533239 0 2.145769l9.649269 9.6454-9.649269 9.6493c-.609659.6135-.609659 1.5294 0 2.1429.613489.6125 1.533239.6125 2.145769 0l9.6454-9.6454 9.6493 9.6454c.6135.6125 1.5294.6125 2.1429 0 .6125-.6135.6125-1.5294 0-2.1429z" fill="#193862" fill-rule="evenodd"/></svg>
+        </span><span class="screen-reader-text">Menu</span>					</button>
+					<div id="mobile-menu" class="main-nav"><ul id="menu-primary-1" class=" menu sf-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2802"><a href="https://www.colombohurdlaw.com/attorneys/">Our People</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2961"><a href="#">Immigration Services<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow"><svg viewBox="0 0 330 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"><path d="M305.913 197.085c0 2.266-1.133 4.815-2.833 6.514L171.087 335.593c-1.7 1.7-4.249 2.832-6.515 2.832s-4.815-1.133-6.515-2.832L26.064 203.599c-1.7-1.7-2.832-4.248-2.832-6.514s1.132-4.816 2.832-6.515l14.162-14.163c1.7-1.699 3.966-2.832 6.515-2.832 2.266 0 4.815 1.133 6.515 2.832l111.316 111.317 111.316-111.317c1.7-1.699 4.249-2.832 6.515-2.832s4.815 1.133 6.515 2.832l14.162 14.163c1.7 1.7 2.833 4.249 2.833 6.515z" /></svg></span></span></a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-practice menu-item-has-children menu-item-2952"><a href="https://www.colombohurdlaw.com/practice/business-immigration/">Business Immigration Lawyers<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow-right"><svg viewBox="0 0 192 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M178.425 256.001c0 2.266-1.133 4.815-2.832 6.515L43.599 394.509c-1.7 1.7-4.248 2.833-6.514 2.833s-4.816-1.133-6.515-2.833l-14.163-14.162c-1.699-1.7-2.832-3.966-2.832-6.515 0-2.266 1.133-4.815 2.832-6.515l111.317-111.316L16.407 144.685c-1.699-1.7-2.832-4.249-2.832-6.515s1.133-4.815 2.832-6.515l14.163-14.162c1.7-1.7 4.249-2.833 6.515-2.833s4.815 1.133 6.514 2.833l131.994 131.993c1.7 1.7 2.832 4.249 2.832 6.515z" fill-rule="nonzero" /></svg></span></span></a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-post_type menu-item-object-service menu-item-2828"><div class="menu-item-description">Permanent Residence through Employment</div><a href="https://www.colombohurdlaw.com/visas/eb-1-visa/">EB-1A Visa</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-service menu-item-has-children menu-item-2829"><a href="https://www.colombohurdlaw.com/visas/eb-2-national-interest-waiver-niw/">EB-2 NIW Visa<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow-right"><svg viewBox="0 0 192 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M178.425 256.001c0 2.266-1.133 4.815-2.832 6.515L43.599 394.509c-1.7 1.7-4.248 2.833-6.514 2.833s-4.816-1.133-6.515-2.833l-14.163-14.162c-1.699-1.7-2.832-3.966-2.832-6.515 0-2.266 1.133-4.815 2.832-6.515l111.317-111.316L16.407 144.685c-1.699-1.7-2.832-4.249-2.832-6.515s1.133-4.815 2.832-6.515l14.163-14.162c1.7-1.7 4.249-2.833 6.515-2.833s4.815 1.133 6.514 2.833l131.994 131.993c1.7 1.7 2.832 4.249 2.832 6.515z" fill-rule="nonzero" /></svg></span></span></a>
+		<ul class="sub-menu">
+			<li class="menu-item menu-item-type-post_type menu-item-object-service menu-item-6366"><a href="https://www.colombohurdlaw.com/visas/eb-2-national-interest-waiver-niw/the-advantages-of-self-petitioning-niws/">The Advantages of Self-Petitioning NIWs</a></li>
+		</ul>
+</li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3654"><a href="https://www.colombohurdlaw.com/visas/eb-3-visa/">EB-3 Visa</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-service menu-item-2831"><div class="menu-item-description">Employment Non-immigrant Visas</div><a href="https://www.colombohurdlaw.com/visas/o-1-visa/">O-1 Visas</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3658"><a href="https://www.colombohurdlaw.com/visas/l-1-visas/">L-1 Visas (L-1A &amp; L-1B)</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3657"><a href="https://www.colombohurdlaw.com/visas/p-1-visa/">P-1 Visa (Artists, Athletes and Entertainers)</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3656"><a href="https://www.colombohurdlaw.com/visas/r-visa/">R Visa (Religious Workers)</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-service menu-item-3655"><a href="https://www.colombohurdlaw.com/visas/tn-visa/">TN Visa (NAFTA Professionals)</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-practice menu-item-has-children menu-item-2954"><a href="https://www.colombohurdlaw.com/practice/investor-visas/">Investor Visa Lawyers<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow-right"><svg viewBox="0 0 192 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M178.425 256.001c0 2.266-1.133 4.815-2.832 6.515L43.599 394.509c-1.7 1.7-4.248 2.833-6.514 2.833s-4.816-1.133-6.515-2.833l-14.163-14.162c-1.699-1.7-2.832-3.966-2.832-6.515 0-2.266 1.133-4.815 2.832-6.515l111.317-111.316L16.407 144.685c-1.699-1.7-2.832-4.249-2.832-6.515s1.133-4.815 2.832-6.515l14.163-14.162c1.7-1.7 4.249-2.833 6.515-2.833s4.815 1.133 6.514 2.833l131.994 131.993c1.7 1.7 2.832 4.249 2.832 6.515z" fill-rule="nonzero" /></svg></span></span></a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-post_type menu-item-object-service menu-item-2959"><div class="menu-item-description">Permanent Residence through Investment</div><a href="https://www.colombohurdlaw.com/visas/eb5-visa/">EB-5 Visa</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-service menu-item-has-children menu-item-3160"><div class="menu-item-description">Investment Non-immigrant Visas</div><a href="https://www.colombohurdlaw.com/visas/e2-visas/">E-2 Visa<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow-right"><svg viewBox="0 0 192 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M178.425 256.001c0 2.266-1.133 4.815-2.832 6.515L43.599 394.509c-1.7 1.7-4.248 2.833-6.514 2.833s-4.816-1.133-6.515-2.833l-14.163-14.162c-1.699-1.7-2.832-3.966-2.832-6.515 0-2.266 1.133-4.815 2.832-6.515l111.317-111.316L16.407 144.685c-1.699-1.7-2.832-4.249-2.832-6.515s1.133-4.815 2.832-6.515l14.163-14.162c1.7-1.7 4.249-2.833 6.515-2.833s4.815 1.133 6.514 2.833l131.994 131.993c1.7 1.7 2.832 4.249 2.832 6.515z" fill-rule="nonzero" /></svg></span></span></a>
+		<ul class="sub-menu">
+			<li class="menu-item menu-item-type-post_type menu-item-object-service menu-item-4542"><a href="https://www.colombohurdlaw.com/visas/e2-visas/long-take-obtain-e2-visa/">How Long Does it Take to Get an E2 Visa?</a></li>
+			<li class="menu-item menu-item-type-post_type menu-item-object-service menu-item-4543"><a href="https://www.colombohurdlaw.com/visas/e2-visas/e-2-visa-extension-requirements/">E2 Visa Extension Requirements</a></li>
+			<li class="menu-item menu-item-type-post_type menu-item-object-service menu-item-4544"><a href="https://www.colombohurdlaw.com/visas/e2-visas/understanding-the-e-2-substantial-capital-requirement/">E2 Substantial Capital Investment Requirements</a></li>
+			<li class="menu-item menu-item-type-post_type menu-item-object-service menu-item-4546"><a href="https://www.colombohurdlaw.com/visas/e2-visas/advantages-disadvantages-investment-franchise-obtain-e-2-visa/">Investing in a Franchise for Your E-2 Visa</a></li>
+			<li class="menu-item menu-item-type-post_type menu-item-object-service menu-item-4547"><a href="https://www.colombohurdlaw.com/visas/e2-visas/e2-visa-for-canadian-investors/">E-2 Visa for Canadian Investors</a></li>
+		</ul>
+</li>
+	</ul>
+</li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type_archive menu-item-object-case_study menu-item-2804"><a href="https://www.colombohurdlaw.com/case-studies/">Case Studies</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2801"><a href="https://www.colombohurdlaw.com/news-articles/">News &#038; Resources</a></li>
+<li class="menu-item-button menu-item menu-item-type-post_type menu-item-object-modal menu-item-2800"><a href="#" data-bs-toggle="modal" data-bs-target="#modal-2798" role="button">Contact Us</a></li>
+<li class="menu-item wpml-ls-slot-4 wpml-ls-item wpml-ls-item-es wpml-ls-menu-item wpml-ls-first-item menu-item-type-wpml_ls_menu_item menu-item-object-wpml_ls_menu_item menu-item-wpml-ls-4-es"><a href="https://www.colombohurdlaw.com/es/aviso-de-privacidad/" title="Switch to Español"><img
+            class="wpml-ls-flag"
+            src="https://www.colombohurdlaw.com/wp-content/plugins/sitepress-multilingual-cms/res/flags/es.svg"
+            alt=""
+            
+            
+    /><span class="wpml-ls-native" lang="es">Español</span></a></li>
+<li class="menu-item wpml-ls-slot-4 wpml-ls-item wpml-ls-item-pt-br wpml-ls-menu-item wpml-ls-last-item menu-item-type-wpml_ls_menu_item menu-item-object-wpml_ls_menu_item menu-item-wpml-ls-4-pt-br"><a href="https://www.colombohurdlaw.com/pt-br/privacy-policy/" title="Switch to Português"><img
+            class="wpml-ls-flag"
+            src="https://www.colombohurdlaw.com/wp-content/plugins/sitepress-multilingual-cms/res/flags/pt-br.svg"
+            alt=""
+            
+            
+    /><span class="wpml-ls-native" lang="pt-br">Português</span></a></li>
+</ul></div>			</div><!-- .inside-navigation -->
+		</nav><!-- #site-navigation -->
+		
+	<div class="site grid-container container hfeed" id="page">
+				<div class="site-content" id="content">
+			
+	<div class="content-area" id="primary">
+		<main class="site-main" id="main">
+			
+<article id="post-3" class="post-3 page type-page status-publish" itemtype="https://schema.org/CreativeWork" itemscope>
+	<div class="inside-article">
+		
+			<header class="entry-header">
+				<h1 class="entry-title" itemprop="headline">Privacy Policy</h1>			</header>
+
+			
+		<div class="entry-content" itemprop="text">
+			
+<p>The information on this website is for general information purposes only. Nothing on this site should be taken as legal advice for any individual case or situation. This information is not intended to create, and receipt or viewing does not constitute, an attorney-client relationship. © 2016 Colombo &amp; Hurd, PL. All rights reserved</p>
+
+
+
+<p>This privacy notice discloses the privacy practices for Colombo Hurd relating to <strong>www.colombohurdlaw.com</strong> and <strong>niwapproval.com</strong>. This privacy notice applies to information collected by these websites. It will notify you of the following:</p>
+
+
+
+<ul class="wp-block-list">
+<li>What personally identifiable information is collected from you through the web site, how it is used and with whom it may be shared.</li>
+
+
+
+<li>What choices are available to you regarding the use of your data.</li>
+
+
+
+<li>The security procedures in place to protect the misuse of your information.</li>
+
+
+
+<li>How you can correct any inaccuracies in the information.</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">Information Collection, Use, and Sharing</h2>
+
+
+
+<p>We are the sole owners of the information collected on this site. We only have access to/collect information that you voluntarily give us via email or other direct contact from you. We will not sell or rent this information to anyone. We will use your information to respond to you, regarding the reason you contacted us. We will not share your information with any third party outside of our organization, other than as necessary to fulfill your request, e.g. to ship an order. Unless you ask us not to, we may contact you via email in the future to tell you about specials, new products or services, or changes to this privacy policy.</p>
+
+
+
+<h2 class="wp-block-heading">Your Access to and Control Over Information</h2>
+
+
+
+<p>You may opt out of any future contacts from us at any time. You can do the following at any time by contacting us via the email address or phone number given on our website:</p>
+
+
+
+<ul class="wp-block-list">
+<li>See what data we have about you, if any.</li>
+
+
+
+<li>Change/correct any data we have about you.</li>
+
+
+
+<li>Have us delete any data we have about you.</li>
+
+
+
+<li>Express any concern you have about our use of your data.</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">Security</h2>
+
+
+
+<p>We take precautions to protect your information. When you submit sensitive information via the website, your information is protected both online and offline. Wherever we collect sensitive information (such as credit card data), that information is encrypted and transmitted to us in a secure way. You can verify this by looking for a closed lock icon at the bottom of your web browser, or looking for “https” at the beginning of the address of the web page. While we use encryption to protect sensitive information transmitted online, we also protect your information offline. Only employees who need the information to perform a specific job (for example, billing or customer service) are granted access to personally identifiable information. The computers/servers in which we store personally identifiable information are kept in a secure environment.</p>
+
+
+
+<h2 class="wp-block-heading">Registration</h2>
+
+
+
+<p>In order to use this website, a user must first complete the registration form. During registration a user is required to give certain information (such as name and email address). This information is used to contact you about the products/services on our site in which you have expressed interest. At your option, you may also provide demographic information (such as gender or age) about yourself, but it is not required.</p>
+
+
+
+<h2 class="wp-block-heading">Orders</h2>
+
+
+
+<p>We request information from you on our order form. To buy from us, you must provide contact information (like name and shipping address) and financial information (like credit card number, expiration date). This information is used for billing purposes and to fill your orders. If we have trouble processing an order, we’ll use this information to contact you.</p>
+
+
+
+<h2 class="wp-block-heading">Cookies</h2>
+
+
+
+<p>We use “cookies” on this site. A cookie is a piece of data stored on a site visitor’s hard drive to help us improve your access to our site and identify repeat visitors to our site. For instance, when we use a cookie to identify you, you would not have to log in a password more than once, thereby saving time while on our site. Cookies can also enable us to track and target the interests of our users to enhance the experience on our site. Usage of a cookie is in no way linked to any personally identifiable information on our site. Some of our business partners may use cookies on our site (for example, advertisers). However, we have no access to or control over these cookies.</p>
+
+
+
+<h2 class="wp-block-heading">Sharing</h2>
+
+
+
+<p>We share aggregated demographic information with our partners and advertisers. This is not linked to any personal information that can identify any individual person.</p>
+
+
+
+<h2 class="wp-block-heading">Advertising Disclosures</h2>
+
+
+
+<p>Some materials on the Platform may constitute lawyer advertising. The choice of a lawyer is an important decision, and it should never be based solely upon an advertisement. Before making your choice of any attorney, you should give this matter careful thought. The selection of an attorney is an important decision. FREE BACKGROUND INFORMATION IS AVAILABLE UPON REQUEST. Before you decide, you may ask us to send you free written information about our qualifications and experience. No representation is made that the legal services to be performed are greater than the quality of legal services performed by other lawyers. Anyone considering a lawyer should independently investigate the lawyer’s credentials and ability, and not rely upon advertisements or self-proclaimed expertise. No representation is made here about your specific rights in any specific matter. Every case is different and must be judged on its own merits. Prior results do not guarantee a similar outcome.</p>
+
+
+
+<h2 class="wp-block-heading">Use of Personal Information</h2>
+
+
+
+<p>We may use the personal information we collect for the following purposes and as otherwise described in this Privacy Policy or at the time of collection:</p>
+
+
+
+<p><strong>To Provide Our Platform.</strong> We use personal information to provide our services, including the Platform. For example, we use personal information:</p>
+
+
+
+<ul class="wp-block-list">
+<li>to provide you with legal and other services, content, and features you request;</li>
+
+
+
+<li>to create, manage, and monitor your account;</li>
+
+
+
+<li>to respond to your inquiries and communicate with you, including placing calls or sending texts using any automated technology, including prerecorded messages;</li>
+
+
+
+<li>to operate, troubleshoot, and improve the Platform;</li>
+
+
+
+<li>to understand your interests, personalize your experience on the Platform, and deliver information about products and services relevant to your interests;</li>
+
+
+
+<li>respond to your inquiries and requests for customer support, including to investigate and address your concerns and monitor and improve our responses; and</li>
+
+
+
+<li>enable security features of the Platform, such as by sending you security codes via email or SMS, and remembering devices from which you have previously logged in.</li>
+
+
+
+<li>For Direct Marketing. We may use your personal information to send you newsletters, legal updates, event information, marketing communications, and other information that may interest you and we understand that you are requesting that information from us and agree to receive it. Of course, you can opt out at any time.</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading">Links</h2>
+
+
+
+<p>This web site contains links to other sites. Please be aware that we are not responsible for the content or privacy practices of such other sites. We encourage our users to be aware when they leave our site and to read the privacy statements of any other site that collects personally identifiable information.</p>
+
+
+
+<h2 class="wp-block-heading">Surveys &amp; Contests</h2>
+
+
+
+<p>From time-to-time our site requests information via surveys or contests. Participation in these surveys or contests is completely voluntary and you may choose whether or not to participate and therefore disclose this information. Information requested may include contact information (such as name and shipping address), and demographic information (such as zip code, age level). Contact information will be used to notify the winners and award prizes. Survey information will be used for purposes of monitoring or improving the use and satisfaction of this site.</p>
+
+
+
+<p><strong>If you feel that we are not abiding by this privacy policy, you should contact us immediately via telephone at (407) 478-1111 or via mail Attn: Privacy Policy, 301 E. Pine St., Suite 450 Orlando, Florida 32801.</strong></p>
+		</div>
+
+			</div>
+</article>
+		</main>
+	</div>
+
+	
+	</div>
+</div>
+
+
+<div class="site-footer">
+	<section class="wp-block-acf wp-block-acf-cta wp-block-acf--spacing-large alignfull wp-block-acf-cta" id="block_17dffbd7e835c7708d8e06222bf4a303"><div class="wp-block-acf-cta__image"><img data-perfmatters-preload width="1920" height="371" src="https://www.colombohurdlaw.com/wp-content/uploads/2025/03/CTA-Background-1920x371.jpg" class="attachment-image-1920 size-image-1920" alt="" decoding="async" loading="lazy" srcset="https://www.colombohurdlaw.com/wp-content/uploads/2025/03/CTA-Background-1920x371.jpg 1920w, https://www.colombohurdlaw.com/wp-content/uploads/2025/03/CTA-Background-768x148.jpg 768w, https://www.colombohurdlaw.com/wp-content/uploads/2025/03/CTA-Background-1270x245.jpg 1270w, https://www.colombohurdlaw.com/wp-content/uploads/2025/03/CTA-Background-430x83.jpg 430w, https://www.colombohurdlaw.com/wp-content/uploads/2025/03/CTA-Background-1536x297.jpg 1536w, https://www.colombohurdlaw.com/wp-content/uploads/2025/03/CTA-Background-2048x396.jpg 2048w, https://www.colombohurdlaw.com/wp-content/uploads/2025/03/CTA-Background-1440x278.jpg 1440w" sizes="auto, (max-width: 1920px) 100vw, 1920px" style="object-position: 50% 50%; object-fit: cover;" /></div><div class="wp-block-acf-cta__container"><div class="wp-block-acf-cta__content content-width"><h2 class="h3">Start Your Journey to Live & Work in the U.S.</h2><div class="wp-block-acf-cta__button"><a class="button--secondary" href="#" data-bs-toggle="modal" data-bs-target="#modal-2798" role="button">See How We Can Help</a></div></section>
+<div class="site-footer__container">
+<div class="gb-element-abef192e site-footer__links">
+<div><section class="frontend wp-block-acf wp-block-acf-navigation" id="block_937853a652a1dbbcf089af979599caf3"><div class="wp-block-acf-navigation__container"><ul class="menu menu-footer"><li><a href="https://www.colombohurdlaw.com/">Home</a></li><li><a href="https://www.colombohurdlaw.com/attorneys/">Our People</a></li><li><a href="https://www.colombohurdlaw.com/case-studies/">Case Studies</a></li><li><a href="https://www.colombohurdlaw.com/news-articles/">News &#038; Resources</a></li></ul></section></div>
+
+
+
+<div>
+<h2 class="gb-text"></h2>
+
+
+<section class="frontend wp-block-acf wp-block-acf-navigation" id="block_6009113f9f5ac163d8fbc4650a16fbea"><div class="wp-block-acf-navigation__container"><ul class="menu menu-services-1"><li><a href="https://www.colombohurdlaw.com/practice/business-immigration/">Business Immigration Lawyers</a></li><li><a href="https://www.colombohurdlaw.com/visas/eb-2-national-interest-waiver-niw/">EB-2 NIW Visa Lawyers</a></li><li><a href="https://www.colombohurdlaw.com/visas/eb-1-visa/">EB-1 Visa Lawyers (Advanced Degree Professionals)</a></li><li><a href="https://www.colombohurdlaw.com/visas/o-1-visa/">O1 Visa Lawyers</a></li></ul></section></div>
+
+
+
+<div>
+<h2 class="gb-text"></h2>
+
+
+<section class="frontend wp-block-acf wp-block-acf-navigation" id="block_a70c9a0747728d048d1bc373efd06e83"><div class="wp-block-acf-navigation__container"><ul class="menu menu-services-2"><li><a href="https://www.colombohurdlaw.com/practice/investor-visas/">Investor Visa Lawyers</a></li><li><a href="https://www.colombohurdlaw.com/visas/e2-visas/">E2 Visa Lawyers</a></li><li><a href="https://www.colombohurdlaw.com/visas/eb5-visa/">EB-5 Visa Lawyers</a></li></ul></section></div>
+</div>
+
+
+
+<div class="gb-element-fd17f5cb site-footer__grid">
+<div>
+<img loading="lazy" decoding="async" width="218" height="40" class="gb-media-d258a7ea" alt="" src="https://www.colombohurdlaw.com/wp-content/uploads/2025/03/logo-footer.svg" title="logo-footer"/>
+
+
+
+<p>Colombo &amp; Hurd is an award winning boutique law firm founded by immigrants. We are dedicated to assisting clients—from the world's leading multinational corporations to entrepreneurs, investors and their families— who seek to live and work in the United States.</p>
+</div>
+
+
+
+<div>
+<p class="gb-text"><strong>Location</strong></p>
+
+
+
+<p class="gb-text">301 E Pine St #450<br>Orlando, FL 32801</p>
+</div>
+
+
+
+<div>
+<p class="gb-text"><strong>Contact</strong></p>
+
+
+
+<p class="gb-text">Phone: (407) 478-1111</p>
+</div>
+
+
+
+<div>
+<div class="site-footer__social"><div class="gb-container gb-container-48d1b013">
+
+<a class="gb-text gb-text-8d2fac39" href="https://paynow.cardx.com/colombohurdxc" target="_blank" rel="noopener">Pay Bill</a>
+
+</div>
+
+<div class="gb-container gb-container-349d478c">
+
+<a class="gb-button gb-button-3710b7e6 button--social" href="https://web.whatsapp.com/send?phone=16892446033&amp;text=" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><span class="gb-icon"><svg aria-hidden="true" role="img" height="1em" width="1em" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"></path></svg></span></a>
+
+
+
+<a class="gb-button gb-button-5f3e7b3a button--social" href="https://www.instagram.com/colomboandhurd/?hl=en" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><span class="gb-icon"><svg aria-hidden="true" role="img" height="1em" width="1em" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg></span></a>
+
+
+
+<a class="gb-button gb-button-a6fda582 button--social" href="https://www.youtube.com/channel/UCWWZGKswGzpEvZUTLrhlAJw" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><span class="gb-icon"><svg aria-hidden="true" role="img" height="1em" width="1em" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path></svg></span></a>
+
+
+
+<a class="gb-button gb-button-e6cdbe6f button--social" href="https://www.linkedin.com/company/colomboandhurd/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><span class="gb-icon"><svg aria-hidden="true" role="img" height="1em" width="1em" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path></svg></span></a>
+
+
+
+<a class="gb-button gb-button-60ee8255 button--social" href="https://www.facebook.com/colombohurd/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><span class="gb-icon"><svg aria-hidden="true" role="img" height="1em" width="1em" viewBox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path></svg></span></a>
+
+</div></div>
+</div>
+</div>
+
+
+
+<div class="site-footer__copyright"><section class="frontend wp-block-acf wp-block-acf-navigation" id="block_59746231d7070e37a9adb4d4fe572513"><div class="wp-block-acf-navigation__container"><ul class="menu menu-copyright"><li><a href="https://www.colombohurdlaw.com/privacy-policy/">Privacy Policy</a></li></ul></section></div>
+</div>
+
+<div>
+<a class="gb-text-945dc5c8" href="https://web.whatsapp.com/send?phone=16892446033&#038;text=" target="_blank" rel="noopener"><span class="gb-shape"><svg aria-hidden="true" role="img" height="1em" width="1em" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"></path></svg></span><span class="gb-text">WhatsApp</span></a>
+</div>
+</div>
+
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/*"},{"not":{"href_matches":["\/wp-*.php","\/wp-admin\/*","\/wp-content\/uploads\/*","\/wp-content\/*","\/wp-content\/plugins\/*","\/wp-content\/themes\/sayenko-colombo\/*","\/wp-content\/themes\/generatepress\/*","\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+
+<div class="modal fade" id="modal-2798" tabindex="-1"
+	aria-labelledby="modal-2798Label" aria-hidden="true">
+	<div class="modal-dialog			                        			                        			                        			                        			                        			                         modal-xxl">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title visually-hidden" aria-hidden="true" id="modal-2798Label">schedule a consultation</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body has-form">
+				<div>
+					
+<h2 class="gb-text">Contact Us</h2>
+
+
+
+<p>Have questions or ready to schedule a consultation? Get in touch today.</p>
+
+
+
+<p><strong>ORLANDO OFFICE</strong><br>Address: 301 E Pine St #300<br>Orlando, FL 32801<br>Phone: (407) 478-1111<br>Hours: 8AM–5:30PM</p>
+				</div>
+
+				<div >
+                <div class='gf_browser_chrome gform_wrapper gravity-theme gform-theme--no-framework' data-form-theme='gravity-theme' data-form-index='0' id='gform_wrapper_1' ><div id='gf_1' class='gform_anchor' tabindex='-1'></div><form method='post' enctype='multipart/form-data' target='gform_ajax_frame_1' id='gform_1'  action='/privacy-policy/#gf_1' data-formid='1' novalidate>
+                        <div class='gform-body gform_body'><div id='gform_fields_1' class='gform_fields top_label form_sublabel_below description_below validation_below'><div id="field_1_1" class="gfield gfield--type-text gfield--input-type-text gfield--width-half field_sublabel_below gfield--no-description field_description_below hidden_label field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_1_1'>First Name</label><div class='ginput_container ginput_container_text'><input name='input_1' id='input_1_1' type='text' value='' class='large'    placeholder='First Name*'  aria-invalid="false"   /></div></div><div id="field_1_3" class="gfield gfield--type-text gfield--input-type-text gfield--width-half gfield_contains_required field_sublabel_below gfield--no-description field_description_below hidden_label field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_1_3'>Last Name<span class="gfield_required"><span class="gfield_required gfield_required_text">(Required)</span></span></label><div class='ginput_container ginput_container_text'><input name='input_3' id='input_1_3' type='text' value='' class='large'    placeholder='Last Name*' aria-required="true" aria-invalid="false"   /></div></div><div id="field_1_4" class="gfield gfield--type-email gfield--input-type-email gfield--width-full gfield_contains_required field_sublabel_below gfield--no-description field_description_below hidden_label field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_1_4'>Email<span class="gfield_required"><span class="gfield_required gfield_required_text">(Required)</span></span></label><div class='ginput_container ginput_container_email'>
+                            <input name='input_4' id='input_1_4' type='email' value='' class='large'   placeholder='Email*' aria-required="true" aria-invalid="false"  />
+                        </div></div><div id="field_1_11" class="gfield gfield--type-phone gfield--input-type-phone gfield--width-full field_sublabel_below gfield--no-description field_description_below hidden_label field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_1_11'>Phone</label><div class='ginput_container ginput_container_phone'><input name='input_11' id='input_1_11' type='tel' value='' class='large'  placeholder='Phone*'  aria-invalid="false"   /></div></div><div id="field_1_7" class="gfield gfield--type-textarea gfield--input-type-textarea gfield--width-full field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_1_7'>Additional Information</label><div class='ginput_container ginput_container_textarea'><textarea name='input_7' id='input_1_7' class='textarea large'    placeholder='Any other helpful details?'  aria-invalid="false"   rows='10' cols='50'></textarea></div></div><div id="field_1_8" class="gfield gfield--type-html gfield--input-type-html gfield--width-full privacy gfield_html gfield_html_formatted gfield_no_follows_desc field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><p>By submitting this form, I agree to the <a href="/privacy-policy" target="_blank">Privacy Policy</a></p></div><div id="field_1_12" class="gfield gfield--type-turnstile gfield--input-type-turnstile gfield--width-full field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><div class='ginput_container ginput_container_turnstile'><div class="cf-turnstile" id="cf-turnstile_1" data-js-turnstile data-response-field-name="cf-turnstile-response_1" data-theme="auto" data-sitekey="0x4AAAAAABoXAmCwS4VZBEQN"></div></div></div></div></div>
+        <div class='gform-footer gform_footer top_label'> <input type='submit' id='gform_submit_button_1' class='gform_button button' onclick='gform.submission.handleButtonClick(this);' data-submission-type='submit' value='Send Message'  /> <input type='hidden' name='gform_ajax' value='form_id=1&amp;title=&amp;description=&amp;tabindex=0&amp;theme=gravity-theme&amp;styles=[]&amp;hash=6deef4ac7d48a49c61947aca54cc2fd2' />
+            <input type='hidden' class='gform_hidden' name='gform_submission_method' data-js='gform_submission_method_1' value='iframe' />
+            <input type='hidden' class='gform_hidden' name='gform_theme' data-js='gform_theme_1' id='gform_theme_1' value='gravity-theme' />
+            <input type='hidden' class='gform_hidden' name='gform_style_settings' data-js='gform_style_settings_1' id='gform_style_settings_1' value='[]' />
+            <input type='hidden' class='gform_hidden' name='is_submit_1' value='1' />
+            <input type='hidden' class='gform_hidden' name='gform_submit' value='1' />
+            
+            <input type='hidden' class='gform_hidden' name='gform_unique_id' value='' />
+            <input type='hidden' class='gform_hidden' name='state_1' value='WyJbXSIsIjY5NjYyYTQ0MjkzNDY0M2MyMGEwOTEwMTczMGIxMTRmIl0=' />
+            <input type='hidden' autocomplete='off' class='gform_hidden' name='gform_target_page_number_1' id='gform_target_page_number_1' value='0' />
+            <input type='hidden' autocomplete='off' class='gform_hidden' name='gform_source_page_number_1' id='gform_source_page_number_1' value='1' />
+            <input type='hidden' name='gform_field_values' value='' />
+            
+        </div>
+                        </form>
+                        </div>
+		                <iframe style='display:none;width:0px;height:0px;' src='about:blank' name='gform_ajax_frame_1' id='gform_ajax_frame_1' title='This iframe contains the logic required to handle Ajax powered Gravity Forms.'></iframe>
+		                <script>
+gform.initializeOnLoaded( function() {gformInitSpinner( 1, 'https://www.colombohurdlaw.com/wp-content/plugins/gravityforms/images/spinner.svg', true );jQuery('#gform_ajax_frame_1').on('load',function(){var contents = jQuery(this).contents().find('*').html();var is_postback = contents.indexOf('GF_AJAX_POSTBACK') >= 0;if(!is_postback){return;}var form_content = jQuery(this).contents().find('#gform_wrapper_1');var is_confirmation = jQuery(this).contents().find('#gform_confirmation_wrapper_1').length > 0;var is_redirect = contents.indexOf('gformRedirect(){') >= 0;var is_form = form_content.length > 0 && ! is_redirect && ! is_confirmation;var mt = parseInt(jQuery('html').css('margin-top'), 10) + parseInt(jQuery('body').css('margin-top'), 10) + 100;if(is_form){jQuery('#gform_wrapper_1').html(form_content.html());if(form_content.hasClass('gform_validation_error')){jQuery('#gform_wrapper_1').addClass('gform_validation_error');} else {jQuery('#gform_wrapper_1').removeClass('gform_validation_error');}setTimeout( function() { /* delay the scroll by 50 milliseconds to fix a bug in chrome */ jQuery(document).scrollTop(jQuery('#gform_wrapper_1').offset().top - mt); }, 50 );if(window['gformInitDatepicker']) {gformInitDatepicker();}if(window['gformInitPriceFields']) {gformInitPriceFields();}var current_page = jQuery('#gform_source_page_number_1').val();gformInitSpinner( 1, 'https://www.colombohurdlaw.com/wp-content/plugins/gravityforms/images/spinner.svg', true );jQuery(document).trigger('gform_page_loaded', [1, current_page]);window['gf_submitting_1'] = false;}else if(!is_redirect){var confirmation_content = jQuery(this).contents().find('.GF_AJAX_POSTBACK').html();if(!confirmation_content){confirmation_content = contents;}jQuery('#gform_wrapper_1').replaceWith(confirmation_content);jQuery(document).scrollTop(jQuery('#gf_1').offset().top - mt);jQuery(document).trigger('gform_confirmation_loaded', [1]);window['gf_submitting_1'] = false;wp.a11y.speak(jQuery('#gform_confirmation_message_1').text());}else{jQuery('#gform_1').append(contents);if(window['gformRedirect']) {gformRedirect();}}jQuery(document).trigger("gform_pre_post_render", [{ formId: "1", currentPage: "current_page", abort: function() { this.preventDefault(); } }]);        if (event && event.defaultPrevented) {                return;        }        const gformWrapperDiv = document.getElementById( "gform_wrapper_1" );        if ( gformWrapperDiv ) {            const visibilitySpan = document.createElement( "span" );            visibilitySpan.id = "gform_visibility_test_1";            gformWrapperDiv.insertAdjacentElement( "afterend", visibilitySpan );        }        const visibilityTestDiv = document.getElementById( "gform_visibility_test_1" );        let postRenderFired = false;        function triggerPostRender() {            if ( postRenderFired ) {                return;            }            postRenderFired = true;            gform.core.triggerPostRenderEvents( 1, current_page );            if ( visibilityTestDiv ) {                visibilityTestDiv.parentNode.removeChild( visibilityTestDiv );            }        }        function debounce( func, wait, immediate ) {            var timeout;            return function() {                var context = this, args = arguments;                var later = function() {                    timeout = null;                    if ( !immediate ) func.apply( context, args );                };                var callNow = immediate && !timeout;                clearTimeout( timeout );                timeout = setTimeout( later, wait );                if ( callNow ) func.apply( context, args );            };        }        const debouncedTriggerPostRender = debounce( function() {            triggerPostRender();        }, 200 );        if ( visibilityTestDiv && visibilityTestDiv.offsetParent === null ) {            const observer = new MutationObserver( ( mutations ) => {                mutations.forEach( ( mutation ) => {                    if ( mutation.type === 'attributes' && visibilityTestDiv.offsetParent !== null ) {                        debouncedTriggerPostRender();                        observer.disconnect();                    }                });            });            observer.observe( document.body, {                attributes: true,                childList: false,                subtree: true,                attributeFilter: [ 'style', 'class' ],            });        } else {            triggerPostRender();        }    } );} );
+</script>
+</div>			</div>
+		</div>
+	</div>
+</div><script id="generate-a11y">
+!function(){"use strict";if("querySelector"in document&&"addEventListener"in window){var e=document.body;e.addEventListener("pointerdown",(function(){e.classList.add("using-mouse")}),{passive:!0}),e.addEventListener("keydown",(function(){e.classList.remove("using-mouse")}),{passive:!0})}}();
+</script>
+
+<div class="wpml-ls-statics-footer wpml-ls wpml-ls-legacy-list-horizontal">
+	<ul><li class="wpml-ls-slot-footer wpml-ls-item wpml-ls-item-es wpml-ls-first-item wpml-ls-item-legacy-list-horizontal">
+				<a href="https://www.colombohurdlaw.com/es/aviso-de-privacidad/" class="wpml-ls-link">
+                                <img
+            class="wpml-ls-flag"
+            src="https://www.colombohurdlaw.com/wp-content/plugins/sitepress-multilingual-cms/res/flags/es.svg"
+            alt=""
+            
+            
+    /><span class="wpml-ls-native" lang="es">Español</span></a>
+			</li><li class="wpml-ls-slot-footer wpml-ls-item wpml-ls-item-pt-br wpml-ls-last-item wpml-ls-item-legacy-list-horizontal">
+				<a href="https://www.colombohurdlaw.com/pt-br/privacy-policy/" class="wpml-ls-link">
+                                <img
+            class="wpml-ls-flag"
+            src="https://www.colombohurdlaw.com/wp-content/plugins/sitepress-multilingual-cms/res/flags/pt-br.svg"
+            alt=""
+            
+            
+    /><span class="wpml-ls-native" lang="pt-br">Português</span></a>
+			</li></ul>
+</div>
+<style id='wp-block-list-inline-css'>
+ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:1.25em 2.375em}
+</style>
+<style id='acf-cta-view-style-inline-css'>
+.wp-block-acf-cta{position:relative;width:100%;--section-spacing:0}.wp-block-acf-cta__image{height:100%;left:0;position:absolute;top:0;width:100%;z-index:1}.wp-block-acf-cta__image img{display:block;height:100%;-o-object-fit:cover;object-fit:cover;width:100%}.wp-block-acf-cta__image:after{background:var(--primary);content:"";height:100%;left:0;opacity:.8;position:absolute;top:0;width:100%;z-index:2}.wp-block-acf-cta__container{align-content:center;margin-inline:auto;padding:56px var(--gutter);position:relative;text-align:center;width:min(var(--container-width),100% - 2*var(--gutter));z-index:3}@media(min-width:992px){.wp-block-acf-cta__container{padding:64px var(--gutter)}}.wp-block-acf-cta__container h2{color:#fff;font-size:var(--h3-alt);margin-bottom:1em;margin-inline:auto;max-width:680px}
+
+</style>
+<style id='acf-navigation-view-style-inline-css'>
+.wp-block-acf-navigation:not(.is-selected){--section-spacing:0}
+
+</style>
+<style id='global-styles-inline-css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--primary: var(--primary);--wp--preset--color--secondary: var(--secondary);--wp--preset--color--dark-grey: var(--dark-grey);--wp--preset--color--grey: var(--grey);--wp--preset--color--light-blue: var(--light-blue);--wp--preset--color--gold: var(--gold);--wp--preset--color--tan: var(--tan);--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:root { --wp--style--global--content-size: var(--container-width);--wp--style--global--wide-size: var(--container-width); }:where(body) { margin: 0; }.wp-site-blocks > .alignleft { float: left; margin-right: 2em; }.wp-site-blocks > .alignright { float: right; margin-left: 2em; }.wp-site-blocks > .aligncenter { justify-content: center; margin-left: auto; margin-right: auto; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}.is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0;padding-bottom: 0px;padding-left: 0;}a:where(:not(.wp-element-button)){text-decoration: none;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-radius: var(--btn-border-radius);border-width: 0;color: #fff;font-family: inherit;font-size: inherit;line-height: inherit;padding: calc(0.667em + 2px) calc(1.333em + 2px);text-decoration: none;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-primary-color{color: var(--wp--preset--color--primary) !important;}.has-secondary-color{color: var(--wp--preset--color--secondary) !important;}.has-dark-grey-color{color: var(--wp--preset--color--dark-grey) !important;}.has-grey-color{color: var(--wp--preset--color--grey) !important;}.has-light-blue-color{color: var(--wp--preset--color--light-blue) !important;}.has-gold-color{color: var(--wp--preset--color--gold) !important;}.has-tan-color{color: var(--wp--preset--color--tan) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-primary-background-color{background-color: var(--wp--preset--color--primary) !important;}.has-secondary-background-color{background-color: var(--wp--preset--color--secondary) !important;}.has-dark-grey-background-color{background-color: var(--wp--preset--color--dark-grey) !important;}.has-grey-background-color{background-color: var(--wp--preset--color--grey) !important;}.has-light-blue-background-color{background-color: var(--wp--preset--color--light-blue) !important;}.has-gold-background-color{background-color: var(--wp--preset--color--gold) !important;}.has-tan-background-color{background-color: var(--wp--preset--color--tan) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-primary-border-color{border-color: var(--wp--preset--color--primary) !important;}.has-secondary-border-color{border-color: var(--wp--preset--color--secondary) !important;}.has-dark-grey-border-color{border-color: var(--wp--preset--color--dark-grey) !important;}.has-grey-border-color{border-color: var(--wp--preset--color--grey) !important;}.has-light-blue-border-color{border-color: var(--wp--preset--color--light-blue) !important;}.has-gold-border-color{border-color: var(--wp--preset--color--gold) !important;}.has-tan-border-color{border-color: var(--wp--preset--color--tan) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+</style>
+<link rel='stylesheet' id='gform_basic-css' href='https://www.colombohurdlaw.com/wp-content/plugins/gravityforms/assets/css/dist/basic.min.css?ver=2.9.15.1755881357' media='all' />
+<link rel='stylesheet' id='gform_theme_components-css' href='https://www.colombohurdlaw.com/wp-content/plugins/gravityforms/assets/css/dist/theme-components.min.css?ver=2.9.15.1755881357' media='all' />
+<link rel='stylesheet' id='gform_theme-css' href='https://www.colombohurdlaw.com/wp-content/plugins/gravityforms/assets/css/dist/theme.min.css?ver=2.9.15.1755881357' media='all' />
+<script src="https://www.colombohurdlaw.com/wp-includes/js/dist/hooks.min.js?ver=4d63a3d491d11ffd8ac6.1755881357" id="wp-hooks-js"></script>
+<script src="https://www.colombohurdlaw.com/wp-includes/js/dist/i18n.min.js?ver=5e580eb46a90c2b997e6.1755881357" id="wp-i18n-js"></script>
+<script id="wp-i18n-js-after">
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+</script>
+<script src="https://www.colombohurdlaw.com/wp-content/themes/sayenko-colombo/build/scripts/project.js?ver=0fcef1428e3892377a7f.1755881357" id="project-js"></script>
+<!--[if lte IE 11]>
+<script src="https://www.colombohurdlaw.com/wp-content/themes/generatepress/assets/js/classList.min.js?ver=3.6.0.1755881357" id="generate-classlist-js"></script>
+<![endif]-->
+<script id="generate-menu-js-before">
+var generatepressMenu = {"toggleOpenedSubMenus":true,"openSubMenuLabel":"Open Sub-Menu","closeSubMenuLabel":"Close Sub-Menu"};
+</script>
+<script src="https://www.colombohurdlaw.com/wp-content/themes/generatepress/assets/js/menu.min.js?ver=3.6.0.1755881357" id="generate-menu-js"></script>
+<script id="generate-menu-js-after">
+document.addEventListener("DOMContentLoaded", () => {
+            const originalOffsetParent = Object.getOwnPropertyDescriptor(HTMLElement.prototype, "offsetParent");
+
+            if (!originalOffsetParent) return;
+
+            let lastWidth = window.innerWidth;
+
+            Object.defineProperty(HTMLElement.prototype, "offsetParent", {
+                get: function() {
+                    if (this.classList.contains("menu-toggle")) {
+                        // Check for search field focus
+                        if (document.activeElement.matches(".mobile-menu-search-form .search-field")) {
+                            return document.body;
+                        }
+
+                        // Check for scroll vs resize
+                        const currentWidth = window.innerWidth;
+                        if (currentWidth === lastWidth) {
+                            return document.body;
+                        }
+
+                        lastWidth = currentWidth;
+                    }
+
+                    return originalOffsetParent.get.call(this);
+                }
+            });
+        });
+    
+
+        document.addEventListener("DOMContentLoaded", () => {
+            // Only prevent toggle clicks from triggering parent anchor navigation
+            document.addEventListener("click", function(e) {
+                const toggle = e.target.closest(".dropdown-menu-toggle");
+                if (toggle) {
+                    // Only apply this behavior if the toggle is inside a mega menu
+                    const megaMenu = toggle.closest(".mega-menu");
+                    if (megaMenu) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        
+                        // Actually toggle the menu using our own class
+                        const menuItem = toggle.closest("li");
+                        if (menuItem) {
+                            menuItem.classList.toggle("mega-menu-open");
+                        }
+                        
+                        return false;
+                    }
+                }
+            }, true);
+        });
+</script>
+<script src="https://www.colombohurdlaw.com/wp-includes/js/dist/dom-ready.min.js?ver=f77871ff7694fffea381.1755881357" id="wp-dom-ready-js"></script>
+<script src="https://www.colombohurdlaw.com/wp-includes/js/dist/a11y.min.js?ver=3156534cc54473497e14.1755881357" id="wp-a11y-js"></script>
+<script defer='defer' src="https://www.colombohurdlaw.com/wp-content/plugins/gravityforms/js/jquery.json.min.js?ver=2.9.15.1755881357" id="gform_json-js"></script>
+<script id="gform_gravityforms-js-extra">
+var gform_i18n = {"datepicker":{"days":{"monday":"Mo","tuesday":"Tu","wednesday":"We","thursday":"Th","friday":"Fr","saturday":"Sa","sunday":"Su"},"months":{"january":"January","february":"February","march":"March","april":"April","may":"May","june":"June","july":"July","august":"August","september":"September","october":"October","november":"November","december":"December"},"firstDay":1,"iconText":"Select date"}};
+var gf_legacy_multi = [];
+var gform_gravityforms = {"strings":{"invalid_file_extension":"This type of file is not allowed. Must be one of the following:","delete_file":"Delete this file","in_progress":"in progress","file_exceeds_limit":"File exceeds size limit","illegal_extension":"This type of file is not allowed.","max_reached":"Maximum number of files reached","unknown_error":"There was a problem while saving the file on the server","currently_uploading":"Please wait for the uploading to complete","cancel":"Cancel","cancel_upload":"Cancel this upload","cancelled":"Cancelled"},"vars":{"images_url":"https:\/\/www.colombohurdlaw.com\/wp-content\/plugins\/gravityforms\/images"}};
+var gf_global = {"gf_currency_config":{"name":"U.S. Dollar","symbol_left":"$","symbol_right":"","symbol_padding":"","thousand_separator":",","decimal_separator":".","decimals":2,"code":"USD"},"base_url":"https:\/\/www.colombohurdlaw.com\/wp-content\/plugins\/gravityforms","number_formats":[],"spinnerUrl":"https:\/\/www.colombohurdlaw.com\/wp-content\/plugins\/gravityforms\/images\/spinner.svg","version_hash":"a18da92eb141f5cba646b11092391bb7","strings":{"newRowAdded":"New row added.","rowRemoved":"Row removed","formSaved":"The form has been saved.  The content contains the link to return and complete the form."}};
+</script>
+<script defer='defer' src="https://www.colombohurdlaw.com/wp-content/plugins/gravityforms/js/gravityforms.min.js?ver=2.9.15.1755881357" id="gform_gravityforms-js"></script>
+<script defer='defer' src="https://www.colombohurdlaw.com/wp-content/plugins/gravityforms/js/placeholders.jquery.min.js?ver=2.9.15.1755881357" id="gform_placeholder-js"></script>
+<script defer='defer' src="https://www.colombohurdlaw.com/wp-content/plugins/gravityforms/assets/js/dist/utils.min.js?ver=380b7a5ec0757c78876bc8a59488f2f3.1755881357" id="gform_gravityforms_utils-js"></script>
+<script defer='defer' src="https://www.colombohurdlaw.com/wp-content/plugins/gravityforms/assets/js/dist/vendor-theme.min.js?ver=21e5a4db1670166692ac5745329bfc80.1755881357" id="gform_gravityforms_theme_vendors-js"></script>
+<script id="gform_gravityforms_theme-js-extra">
+var gform_theme_config = {"common":{"form":{"honeypot":{"version_hash":"a18da92eb141f5cba646b11092391bb7"},"ajax":{"ajaxurl":"https:\/\/www.colombohurdlaw.com\/wp-admin\/admin-ajax.php","ajax_submission_nonce":"16292316ec","i18n":{"step_announcement":"Step %1$s of %2$s, %3$s","unknown_error":"There was an unknown error processing your request. Please try again."}}}},"hmr_dev":"","public_path":"https:\/\/www.colombohurdlaw.com\/wp-content\/plugins\/gravityforms\/assets\/js\/dist\/","config_nonce":"6ab1eb7421"};
+</script>
+<script defer='defer' src="https://www.colombohurdlaw.com/wp-content/plugins/gravityforms/assets/js/dist/scripts-theme.min.js?ver=6948abdc7ae7b144f97e36c93fa02605.1755881357" id="gform_gravityforms_theme-js"></script>
+<script defer='defer' src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&amp;ver=1755881357" id="gform_turnstile_vendor_script-js"></script>
+<script defer='defer' src="https://www.colombohurdlaw.com/wp-content/plugins/gravityformsturnstile/assets/js/dist/vendor-theme.min.js?ver=1.4.0.1755881357" id="gform_turnstile_vendor_theme-js"></script>
+<script defer='defer' src="https://www.colombohurdlaw.com/wp-content/plugins/gravityformsturnstile/assets/js/dist/scripts-theme.min.js?ver=1.4.0.1755881357" id="gform_turnstile_theme-js"></script>
+<script>
+gform.initializeOnLoaded( function() { jQuery(document).on('gform_post_render', function(event, formId, currentPage){if(formId == 1) {if(typeof Placeholders != 'undefined'){
+                        Placeholders.enable();
+                    }} } );jQuery(document).on('gform_post_conditional_logic', function(event, formId, fields, isInit){} ) } );
+</script>
+<script>
+gform.initializeOnLoaded( function() {jQuery(document).trigger("gform_pre_post_render", [{ formId: "1", currentPage: "1", abort: function() { this.preventDefault(); } }]);        if (event && event.defaultPrevented) {                return;        }        const gformWrapperDiv = document.getElementById( "gform_wrapper_1" );        if ( gformWrapperDiv ) {            const visibilitySpan = document.createElement( "span" );            visibilitySpan.id = "gform_visibility_test_1";            gformWrapperDiv.insertAdjacentElement( "afterend", visibilitySpan );        }        const visibilityTestDiv = document.getElementById( "gform_visibility_test_1" );        let postRenderFired = false;        function triggerPostRender() {            if ( postRenderFired ) {                return;            }            postRenderFired = true;            gform.core.triggerPostRenderEvents( 1, 1 );            if ( visibilityTestDiv ) {                visibilityTestDiv.parentNode.removeChild( visibilityTestDiv );            }        }        function debounce( func, wait, immediate ) {            var timeout;            return function() {                var context = this, args = arguments;                var later = function() {                    timeout = null;                    if ( !immediate ) func.apply( context, args );                };                var callNow = immediate && !timeout;                clearTimeout( timeout );                timeout = setTimeout( later, wait );                if ( callNow ) func.apply( context, args );            };        }        const debouncedTriggerPostRender = debounce( function() {            triggerPostRender();        }, 200 );        if ( visibilityTestDiv && visibilityTestDiv.offsetParent === null ) {            const observer = new MutationObserver( ( mutations ) => {                mutations.forEach( ( mutation ) => {                    if ( mutation.type === 'attributes' && visibilityTestDiv.offsetParent !== null ) {                        debouncedTriggerPostRender();                        observer.disconnect();                    }                });            });            observer.observe( document.body, {                attributes: true,                childList: false,                subtree: true,                attributeFilter: [ 'style', 'class' ],            });        } else {            triggerPostRender();        }    } );
+</script>
+
+<script id="perfmatters-delayed-scripts-js">(function(){window.pmDC=0;window.pmDT=15;if(window.pmDT){var e=setTimeout(d,window.pmDT*1e3)}const t=["keydown","mousedown","mousemove","wheel","touchmove","touchstart","touchend"];const n={normal:[],defer:[],async:[]};const o=[];const i=[];var r=false;var a="";window.pmIsClickPending=false;t.forEach(function(e){window.addEventListener(e,d,{passive:true})});if(window.pmDC){window.addEventListener("touchstart",b,{passive:true});window.addEventListener("mousedown",b)}function d(){if(typeof e!=="undefined"){clearTimeout(e)}t.forEach(function(e){window.removeEventListener(e,d,{passive:true})});if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",s)}else{s()}}async function s(){c();u();f();m();await w(n.normal);await w(n.defer);await w(n.async);await p();document.querySelectorAll("link[data-pmdelayedstyle]").forEach(function(e){e.setAttribute("href",e.getAttribute("data-pmdelayedstyle"))});window.dispatchEvent(new Event("perfmatters-allScriptsLoaded")),E().then(()=>{h()})}function c(){let o={};function e(t,e){function n(e){return o[t].delayedEvents.indexOf(e)>=0?"perfmatters-"+e:e}if(!o[t]){o[t]={originalFunctions:{add:t.addEventListener,remove:t.removeEventListener},delayedEvents:[]};t.addEventListener=function(){arguments[0]=n(arguments[0]);o[t].originalFunctions.add.apply(t,arguments)};t.removeEventListener=function(){arguments[0]=n(arguments[0]);o[t].originalFunctions.remove.apply(t,arguments)}}o[t].delayedEvents.push(e)}function t(t,n){const e=t[n];Object.defineProperty(t,n,{get:!e?function(){}:e,set:function(e){t["perfmatters"+n]=e}})}e(document,"DOMContentLoaded");e(window,"DOMContentLoaded");e(window,"load");e(document,"readystatechange");t(document,"onreadystatechange");t(window,"onload")}function u(){let n=window.jQuery;Object.defineProperty(window,"jQuery",{get(){return n},set(t){if(t&&t.fn&&!o.includes(t)){t.fn.ready=t.fn.init.prototype.ready=function(e){if(r){e.bind(document)(t)}else{document.addEventListener("perfmatters-DOMContentLoaded",function(){e.bind(document)(t)})}};const e=t.fn.on;t.fn.on=t.fn.init.prototype.on=function(){if(this[0]===window){function t(e){e=e.split(" ");e=e.map(function(e){if(e==="load"||e.indexOf("load.")===0){return"perfmatters-jquery-load"}else{return e}});e=e.join(" ");return e}if(typeof arguments[0]=="string"||arguments[0]instanceof String){arguments[0]=t(arguments[0])}else if(typeof arguments[0]=="object"){Object.keys(arguments[0]).forEach(function(e){delete Object.assign(arguments[0],{[t(e)]:arguments[0][e]})[e]})}}return e.apply(this,arguments),this};o.push(t)}n=t}})}function f(){document.querySelectorAll("script[type=pmdelayedscript]").forEach(function(e){if(e.hasAttribute("src")){if(e.hasAttribute("defer")&&e.defer!==false){n.defer.push(e)}else if(e.hasAttribute("async")&&e.async!==false){n.async.push(e)}else{n.normal.push(e)}}else{n.normal.push(e)}})}function m(){var o=document.createDocumentFragment();[...n.normal,...n.defer,...n.async].forEach(function(e){var t=e.getAttribute("src");if(t){var n=document.createElement("link");n.href=t;if(e.getAttribute("data-perfmatters-type")=="module"){n.rel="modulepreload"}else{n.rel="preload";n.as="script"}o.appendChild(n)}});document.head.appendChild(o)}async function w(e){var t=e.shift();if(t){await l(t);return w(e)}return Promise.resolve()}async function l(t){await v();return new Promise(function(e){const n=document.createElement("script");[...t.attributes].forEach(function(e){let t=e.nodeName;if(t!=="type"){if(t==="data-perfmatters-type"){t="type"}n.setAttribute(t,e.nodeValue)}});if(t.hasAttribute("src")){n.addEventListener("load",e);n.addEventListener("error",e)}else{n.text=t.text;e()}t.parentNode.replaceChild(n,t)})}async function p(){r=true;await v();document.dispatchEvent(new Event("perfmatters-DOMContentLoaded"));await v();window.dispatchEvent(new Event("perfmatters-DOMContentLoaded"));await v();document.dispatchEvent(new Event("perfmatters-readystatechange"));await v();if(document.perfmattersonreadystatechange){document.perfmattersonreadystatechange()}await v();window.dispatchEvent(new Event("perfmatters-load"));await v();if(window.perfmattersonload){window.perfmattersonload()}await v();o.forEach(function(e){e(window).trigger("perfmatters-jquery-load")})}async function v(){return new Promise(function(e){requestAnimationFrame(e)})}function h(){window.removeEventListener("touchstart",b,{passive:true});window.removeEventListener("mousedown",b);i.forEach(e=>{if(e.target.outerHTML===a){e.target.dispatchEvent(new MouseEvent("click",{view:e.view,bubbles:true,cancelable:true}))}})}function E(){return new Promise(e=>{window.pmIsClickPending?g=e:e()})}function y(){window.pmIsClickPending=true}function g(){window.pmIsClickPending=false}function L(e){e.target.removeEventListener("click",L);C(e.target,"pm-onclick","onclick");i.push(e),e.preventDefault();e.stopPropagation();e.stopImmediatePropagation();g()}function b(e){if(e.target.tagName!=="HTML"){if(!a){a=e.target.outerHTML}window.addEventListener("touchend",A);window.addEventListener("mouseup",A);window.addEventListener("touchmove",k,{passive:true});window.addEventListener("mousemove",k);e.target.addEventListener("click",L);C(e.target,"onclick","pm-onclick");y()}}function k(e){window.removeEventListener("touchend",A);window.removeEventListener("mouseup",A);window.removeEventListener("touchmove",k,{passive:true});window.removeEventListener("mousemove",k);e.target.removeEventListener("click",L);C(e.target,"pm-onclick","onclick");g()}function A(e){window.removeEventListener("touchend",A);window.removeEventListener("mouseup",A);window.removeEventListener("touchmove",k,{passive:true});window.removeEventListener("mousemove",k)}function C(e,t,n){if(e.hasAttribute&&e.hasAttribute(t)){event.target.setAttribute(n,event.target.getAttribute(t));event.target.removeAttribute(t)}}})();</script></body>
+</html>
